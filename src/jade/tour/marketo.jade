@@ -1,0 +1,193 @@
+include ../includes/mixins.jade
+
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    meta(name='keywords', content='marketo, crm, prospecting, find leads, manage sales accounts')
+    meta(name='description', content='Auto-refresh your Marketo contact information with DataFox. We make sure every prospect is truly net-new.')
+    title DataFox | Pipeline Management with Marketo
+
+  body
+
+    //- Header
+    - currentTab = 'integration'
+    - trackingCurrentPage = 'marketo-ext'
+    include ../includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.head-background.section-marketo
+      div.container.page-top-content.section-marketo-margin
+        div.row.text-center
+          div
+            img(src="/img/marketo/header-title.png", height="82px")
+          h1.text-center.section-header Accelerate your account-based marketing by enriching Marketo with account intelligence.
+          a.trial-btn.btn.btn-primary.btn-full(data-toggle="modal", data-target=".default-request-demo-modal", href="javascript:void(0)", data-location='marketo') 
+            h3.text-trial.text-center
+              p Request Trial
+
+    div.container-fluid.section-benefits
+
+        div.header-section
+          h1.text-center.section-header 
+            p Break the barrier between leads and accounts
+        div.container.page-top-content
+          div.row
+            div.col-md-4.text-center
+              div.benefits-background
+                img(src="/img/marketo/build-data.png").benefits-border
+              h2.benefits-text
+                p Build a Strong
+                  br
+                  |Data Foundation
+              h4
+                p Match verified company profiles in
+                  br
+                  |DataFox to Marketo data in real-time and
+                  br
+                  |write enriched fields back into Marketo.
+
+            div.col-md-4.text-center
+              div.benefits-background
+                img(src="/img/marketo/high-value.png").benefits-border1
+              h2.benefits-text
+                p Identify High-value
+                  br
+                  |Prospects
+              h4
+                p Leverage fully enriched data in scoring
+                  br
+                  |models to find high-value prospects
+                  br
+                  |who otherwise would go untouched.
+
+            div.col-md-4.col-md-offset-1.text-center
+              div.benefits-background
+                img(src="/img/marketo/hyper-targeted.png").benefits-border
+              h2.benefits-text
+                p Hyper-targeted Marketing
+                  br
+                  |Programs
+              h4
+                p Create more personalized programs,
+                  br
+                  |optimize scoring models, and
+                  br
+                  |effectively route leads all from your
+                  br
+                  |Marketo workflow.
+
+        div.container-fluid.section-map-account
+          div.container.page-top-content.section-marketo-margin
+            div.row.text-center
+              h1.text-center.section-header Map every account field to your leads
+              h3.account-text
+                p Automatically match leads to accounts in DataFox and Salesforce with
+                p this easy to use webhook and bring over all the fields needed.
+              div.map-image
+                img(src="/img/marketo/map.png").map-border
+
+        div.container-fluid.section-customer
+          div.container.page-top-content.section-marketo-margin
+            div.row.text-center
+              div
+                img(src="/img/marketo/quote.png").customer-border
+              h1.text-center.section-header Accurate account data is critical to the success of
+                br
+                |any account-based strategy for territory planning, 
+                br
+                |lead enrichment, and distribution. We use DataFox 
+                br
+                |as a source of truth because their headcount and 
+                br
+                |technology stack information are extremely accurate.
+              div
+                img(src="/img/marketo/david.png").customer-border1
+              h4.customer-text
+                p David Aguilar
+              h5
+                p Director of Sales Operations at Invoca
+              div.customer-image.col-md-offset-12
+                img(src="/img/marketo/invoca1.png")
+
+        div.container-fluid.section-resources
+          div.container.page-top-content.section-marketo-margin
+            div.row.text-center.section-row
+              div.col-md-6.col-xs-12.bg-blurred2
+                h3.spt Support
+                div.row
+                  div.col-md-6
+                    a(href="https://help.datafox.com/hc/en-us/articles/227826588-Marketo-Webhook-Integration-Installation-Guide").guide-title
+                      h2
+                        p Installation 
+                          br
+                          |Guide
+                    h3.guide
+                      p This step-by-step guide will
+                        |show you how to set up the
+                        |DataFox for Marketo
+                        |webhook in just minutes.
+                    a.marketo-guide.view-guide.trial-btn.btn.btn-primary.btn-full(href="https://help.datafox.com/hc/en-us/articles/227826588-Marketo-Webhook-Integration-Installation-Guide") 
+                      p View Guide
+                  div.col-md-6.col-md-offset-1
+                    img(src="/img/marketo/guide.png", height="174px").vertical-align
+
+              div.col-md-6.col-xs-12.col-md-offset-1.blog-text
+                h3.spt From The Blog
+                div.row.blog-section
+                  div.col-md-12
+                    h2.guide-title
+                      p 5 Ways Account-Based
+                        br
+                        |Marketing Works
+                        br
+                        |for Startups
+                    h3.guide
+                      p Account-based marketing is all about being laser-focused
+                        |on your best-fit prospects instead of doing "spray and pray"
+                        |marketing with traditional lead generation. Because startups
+                        |are smaller, sales and marketing teams have fewer
+                        |resources. They have to get creative with finding ways to
+                        |grow revenue.
+                    a.marketo-guide.blog-guide(href="http://blog.datafox.com/5-ways-account-based-marketing-works-for-startups/") 
+                      p Continue Reading ➞
+
+
+        div.container-fluid.section-customers-marketo
+
+          div.header-section
+            h1.text-center.section-header
+              p DataFox Customers on Marketo
+          div.container.page-top-content
+            div.row
+              div.col-md-4.text-center
+                div
+                  a(href="https://www.google.com/search?q=trackmaven+logo&rlz=1C5CHFA_enUS698US698&espv=2&biw=1280&bih=610&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwj90JKezZzQAhVrxlQKHUNpD-0QsAQIIQ")
+                    img(src="/img/marketo/trackmaven.png", height="35.48px")
+              div.col-md-4.text-center
+                div
+                  a(href="https://www.google.com/search?q=Stitch+Labs+logo&rlz=1C5CHFA_enUS698US698&espv=2&biw=1280&bih=610&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiB7sDxzJzQAhWnjVQKHYnRAOMQ_AUIBygC")
+                    img(src="/img/marketo/stichlabs.png", height="36.85px")
+              div.col-md-4.col-md-offset-1.text-center
+                div
+                  a(href="https://www.google.com/search?q=BrightTALK+logo&rlz=1C5CHFA_enUS698US698&espv=2&biw=1280&bih=610&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj02faKzZzQAhVkwVQKHfzzBcYQ_AUIBigB")
+                    img(src="/img/marketo/bright-talk.png", height="37.4px")
+        div.container-fluid.marketo-subfooter
+          div.container.page-top-content.section-marketo-margin
+            div.row.vertical-align
+              div.col-md-6.text-left
+                h3.spt-footer Want better ROI from your ABM programs?
+                h1.section-header
+                  p Start enriching Marketo data with 
+                    |DataFox account intelligence.
+              div.col-md-3.text-right
+                a.trial-btn.btn.btn-primary.btn-full(data-toggle="modal", data-target=".default-request-demo-modal", href="javascript:void(0)", data-location='subfooter') 
+                  h3.text-trial.text-center
+                    p Request Trial
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade

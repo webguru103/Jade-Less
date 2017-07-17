@@ -1,0 +1,1718 @@
+/* Please maintain the order below */
+
+// @NOTE(Sam) 2016-07-05: Ideally we would be importing /marble/less/datafox/main.less
+// instead of these individual files, but I'm maintaining this for now as to not break
+// the styling
+@import "../../node_modules/marble/vendor/bootstrap3/less/bootstrap.less";
+@import "../../node_modules/marble/vendor/font-awesome4/less/font-awesome.less";
+@import "../../node_modules/marble/icomoon/style.less";
+@import "bootstrap-override.less";
+@import "sales-development.less";
+@import "sales-operations.less";
+@import "account-management.less";
+@import "marketo.less";
+@import "../../node_modules/marble/less/spacing.less";
+
+///////////////////
+// General classes
+///////////////////
+
+// extra-large margin
+.mtxl { margin-top: 40px !important; }
+.mbxl { margin-bottom: 40px !important; }
+.mvxl { margin-top: 40px !important; margin-bottom: 40px !important; }
+.maxl { margin: 40px !important; }
+
+.btn-full {
+  border: 0;
+  text-transform: uppercase;
+  padding: 10px 35px;
+}
+
+@media(max-width: @screen-md-min) {
+  .btn {
+    white-space: normal;
+  }
+}
+
+.btn-full-light {
+  border: 0;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  background-color: @brand-blue;
+  color: @brand-white;
+}
+
+.btn-bordered {
+  border: 2px solid @brand-primary;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+}
+
+.btn-bordered-reg {
+  border: 2px solid @brand-primary;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  padding: 8px 25px; //- To account for the border
+  text-transform: uppercase;
+}
+
+//- Add support for showing menu dropdowns on hover in the navbar
+//- taken from http://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
+.main-nav {
+  @media (min-width: 979px) {
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+
+//- Our version of bootstrap doesn't have the media-left stuff, so here it is...
+.media {
+
+  .media-left, .media-body {
+    display: table-cell;
+  }
+  .media-left {
+    padding-right: 10px;
+  }
+
+  .media-middle {
+    vertical-align: middle;
+  }
+
+  .media-object {
+    display: block;
+  }
+
+  .media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.mini-header {
+  color: @gray-base;
+  line-height: 1.3;
+}
+
+.section-grey {
+  background-color: @gray-lighter;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+// first section after hero/subnav
+.header-section {
+  padding: 100px 10px 40px;
+  text-align: center;
+
+  h4 {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+}
+
+
+@media (min-width: @screen-md-min) {
+  .vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  line-height: 1.6;
+
+  @media (max-width: @screen-sm-max) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .mtl {
+    .btn-primary {
+      background-color: @brand-blue;
+      color: @brand-white;
+    }
+  }
+  .section-header {
+    color: @gray-dark;
+    text-transform: uppercase;
+    font-size: @font-size-largest;
+    padding-bottom: 20px;
+  }
+
+  .image-center {
+    float: left;
+    padding-top: 5px;
+  }
+
+  .image-mtxl-menu {
+    border: 1px #e0d6d6 solid;
+    width: 258px;
+    height: 69px;
+    margin-top: 0px !important;
+    padding: 10px;
+
+  }
+
+  .section-image {
+    width: 100%;
+  }
+
+  .pbn {
+    padding: 0px;
+  }
+
+  a:active, a:focus {
+    .image-hover {
+      background-image: url("/img/use-case/button/select-subTag.png");
+      .image-mtxl-menu {
+        border: 0px;
+      } 
+
+      h4 {
+        color: @brand-white;
+      }
+      
+      .mrl{
+        opacity: 1;
+        display: none
+      }
+
+      .light {
+        margin-left: 0px;
+        opacity: 1;
+        display: inline;
+      }
+    }
+  }
+
+  .nav-tabs > li > a:hover {
+    width: 258px;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0px;
+  }
+
+  .nav > li > a {
+    padding: 0px;
+  }
+
+  .nav-tabs > li {
+    margin-bottom: -2px;
+  }
+  .image-cell {
+    min-height: 600px;
+    padding-top: 15px;
+    // vertically-center images (see http://stackoverflow.com/questions/7273338/how-to-vertically-align-an-image-inside-div)
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .rainforest {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .text-rainforest {
+      font-size: 16px;
+      color: @gray;
+    }
+
+    .quoter {
+      font-size: 14px;
+      color: @gray;
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    @media(max-width: @screen-md-min) {
+      text-align: center;
+    }
+    h2 {
+      font-size: 28px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+
+    .blog-btn {
+      margin-bottom: 100px;
+      text-align: center;
+
+      .btn-bordered {
+        width: 266px;
+        height: 61px;
+        border: 1px #e0e3ea solid;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        color: @gray-dark;
+        background-color: @brand-white;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        text-align:center;
+      }
+      .btn-bordered.active {
+        width: 266px;
+        height: 61px;        
+        border: 1px @brand-blue solid;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        color: @brand-white;
+        background-color: @brand-blue;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        text-align:center;
+        .data-health {
+          margin-left: -19px;
+        }
+      }
+      h3 {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .text-cell {
+    padding: 40px;
+    max-width: 400px;
+
+    h2 {
+      position: relative;
+    }
+    // add partial border above heading
+    h2::before {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background: @gray-light;
+      position: absolute;
+      top: -20px;
+    }
+    p {
+      .text-muted;
+    }
+    @media(max-width: @screen-md-min) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.section-bottom-border {
+  border-bottom: 1px solid @gray-light;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  @media (max-width: @screen-sm-max) {
+    border-bottom: 0;
+  }
+}
+
+.tab-position {
+  padding: 0px;
+  margin-left: 0%;
+}
+
+.section-bottom-background {
+  background-color: @gray-lightest;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  @media (max-width: @screen-md-min) {
+    background-color: @gray-light;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  h1 {
+    text-align: left;
+    color: @brand-black;
+    font-size: 32px;
+    margin-bottom: 30px;
+    @media (max-width: @screen-md-min) {
+      text-align: center;
+      font-size: 26px;
+    }
+  }
+
+  .img-side {
+    @media (max-width: @screen-md-min) {
+      padding-bottom: 0px;
+    }
+  }
+
+  @media (max-width: @screen-md-max) {
+    background-color: @gray-light;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .section-img {
+    max-width: 400px;
+    @media (max-width: @screen-md-max) {
+      margin: 0 auto;
+    }
+  }
+
+  .text-space {
+    max-width: 100%;
+    height: 120px;
+    padding: 10px;
+    background-color: @brand-white;
+    text-align: left;
+    border: 1px #e0e3ea solid;
+    border-top: 0px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    @media (max-width: @screen-md-min) {
+      max-width: 100%;
+      height: 120px;
+      padding: 10px;
+      background-color: @brand-white;
+      text-align: left;
+    }
+    .text-explain {
+      margin-top: 0px;
+      text-align: left;
+    }
+  }
+}
+
+.section-bottom-border-always {
+  border-bottom: 1px solid @gray-light;
+}
+
+.carousel {
+  .carousel-inner {
+    .user {
+      color: @gray-dark;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+  }
+
+  .carousel-indicators {
+    li {
+      border: 0;
+      background-color: @gray-light;
+      margin: 0 5px 0 0;
+    }
+
+    li.active {
+      border: 0;
+      background-color: @brand-primary;
+      height: 10px;
+      width: 10px;
+    }
+
+    li, li.active {
+      @media (max-width: @screen-sm-max) {
+        height: 20px;
+        width: 20px;
+        margin-right: 20px;
+      }
+    }
+
+  }
+}
+
+.page-top.product {
+  background: no-repeat bottom url("../img/splash-images/product.jpg");
+  background-size: cover;
+
+  p {
+    max-width: 500px;
+    margin: 20px auto 10px;
+  }
+  .page-top-content {
+    top: 30%;
+  }
+  .btn-primary {
+    background-color: @brand-blue;
+  }
+
+  .mtl {
+    .btn-primary {
+      color: @brand-white;
+    }
+  }
+}
+
+.page-top.who-benefits {
+  background: no-repeat top url("../img/splash-images/who-benefits.jpg");
+  background-size: cover;
+}
+
+.page-top.customers {
+  background: no-repeat bottom url("../img/splash-images/customers.jpg");
+  background-size: cover;
+}
+
+.page-top.about-us {
+  background: no-repeat center url("../img/splash-images/about-us.jpg");
+  background-size: cover;
+}
+
+.page-top.leadership {
+  background: no-repeat bottom url("../img/splash-images/leadership.jpg");
+  background-size: cover;
+}
+
+.page-top.careers {
+  background: no-repeat bottom url("../img/splash-images/careers.jpg");
+  background-size: cover;
+}
+
+.page-top.press {
+  background: no-repeat bottom url("../img/splash-images/press.jpg");
+  background-size: cover;
+}
+
+.page-top {
+  background: no-repeat center url("../img/sad-fox.jpg");
+  background-size: cover;
+  height: 400px;
+  color: @brand-white;
+
+  .page-top-content {
+    position: relative;
+    top: 40%;
+
+      h1 {
+        font-size: @font-size-largest;
+      }
+  }
+}
+
+.page-top-plain {
+  padding-top: 100px;
+}
+
+.navbar-default {
+  background-color: @brand-navbar1;
+
+  .navbar-toggle, collapsed {
+    @media(max-width: 560px) {
+        right: 20%;
+    }
+
+    @media(max-width: 390px) {
+        right: 30%;
+    }
+
+    @media(max-width: 345px) {
+        right: 40%;
+    }  
+  }
+}
+
+
+
+
+.navbar-default-header {
+  background-color: @brand-navbar;
+}
+
+.page-tabs {
+  border-top: 1px solid @gray-light;
+  border-bottom: 1px solid @gray-light;
+  background-color: @brand-white;
+
+  //To override bootstrap
+  .nav li a {
+    padding: 0;
+  }
+
+  .page-tabs-row {
+
+    .nav-tabs {
+      border-bottom: 0; // Get rid of default BS styling
+    }
+
+    .three-tab li {
+      width: 33%;
+    }
+
+    .four-tab li {
+      width: 25%;
+    }
+
+    .media {
+      display: inline-block;
+      height: 100%;
+      max-width: 100%;
+      padding-top: 10px;
+    }
+
+    li {
+      height: 60px;
+      font-weight: normal;
+      text-align: center;
+      text-transform: uppercase;
+
+      h2 {
+        display: inline;
+        font-size: @font-size-small;
+      }
+
+      a, a:active, a:hover, a:focus {
+        height: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        color: @gray;
+
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    li.active {
+      border-bottom: 1px solid @brand-blue;
+
+      a {
+        color: @gray-base;
+
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.page-tabs-product .page-tabs-row {
+  li {
+    height: initial;
+    a {
+      padding: 20px;
+    }
+    .selected { display: none; }
+    .unselected { display: inline-block; }
+  }
+  li.active {
+    .selected { display: inline-block; }
+    .unselected { display: none; }
+  }
+}
+
+.page-tabs-content {
+
+  .page-tabs-row {
+    line-height: 1.8;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media (max-width: @screen-sm-max) {
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+
+  .even-tabs-row {
+      .col-md-5 {
+        @media (min-width: @screen-md){
+          float: right;
+        }
+      }
+  }
+
+    h3 {
+      color: @palette-shamrock;
+      font-size: @font-size-larger;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .img-side {
+      max-width: 100%;
+      height: auto;
+
+      @media (max-width: @screen-sm-max) {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .page-tabs-overview {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: @screen-sm-min) {
+  .img-mobile {
+    max-width: 100%;
+  }
+}
+
+///////////////////
+// Specific section CSS
+///////////////////
+
+body {
+  height: 100%; // important for scroll-spy
+  font-weight: lighter;
+}
+
+// Main navigation header
+.main-nav {
+  border: 0;
+  font-size: @font-size-small;
+  text-transform: uppercase;
+
+  @media (max-width: @screen-sm-min) {
+    font-size: @font-size-base;
+    background-color: rgba(0,0,0,0.9); //- Make opaque
+  }
+
+  .dropdown-menu {
+    font-size: @font-size-small;
+    background-color: @brand-black;
+
+    a, a:hover {
+      background-color: @brand-black;
+      color: @brand-white;
+    }
+  }
+
+  .navbar-brand {
+    padding: 10px 10px;
+  }
+
+  .navbar-nav {
+    padding-left: 40px;
+
+    @media (min-width: @screen-xs-max) and (max-width: @screen-lg-min) {
+      padding-left: 0;
+    }
+
+    .active {
+      border-bottom: 3px solid @brand-primary;
+    }
+  }
+
+  .datafox-brand {
+    height: 40px;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .signup {
+      border: 2px solid @brand-white;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      padding: 5px 10px;
+      margin: 11px;
+    }
+    .signup:hover {
+      background-color: @brand-white;
+      color: @palette-midnight-blue;
+    }
+  }
+
+}
+
+.hero {
+  background: no-repeat right url("../img/homepage/hero-pic.jpg");
+  background-size: cover;
+  height: 700px;
+  color: @brand-white;
+
+  .hero-content {
+    position: relative;
+    top: 30%;
+
+    .lead {
+      color: #eee;
+    }
+  }
+
+  @media (max-width: @screen-md-min) {
+    height: 400px;
+
+    .hero-content {
+      top: 20%;
+    }
+
+    h1 {
+      font-size: @font-size-larger;
+    }
+  }
+}
+
+.sub-hero {
+  background-color: @brand-white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  a {
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+}
+
+.section-features {
+
+  .feature {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      height: 330px;
+    }
+
+    @media (min-width: @screen-md-max) {
+      height: 300px;
+    }
+  }
+
+  .feature-column {
+    @media (max-width: @screen-sm-max) {
+      padding-bottom: 75px;
+    }
+  }
+
+  .col-md-4:last-child .feature-column {
+    @media (max-width: @screen-sm-max) {
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+.section-logos-carousel {
+
+  .carousel {
+    width: 100%;
+    height: 220px;
+    padding-top: 50px;
+
+    @media (max-width: @screen-md-min) {
+      height: 380px;
+    }
+
+    @media (max-width: @screen-xs-min) {
+      height: 550px;
+    }
+  }
+
+  .logo {
+    padding-right: 35px;
+
+    @media (max-width: @screen-sm-min) {
+      padding-left: 0;
+    }
+  }
+
+  .logo-container:last-child .logo {
+    padding-right: 0;
+
+    @media (max-width: @screen-sm-min) {
+      padding-right: 0;
+    }
+  }
+
+  .logos-left, .logos-right {
+      text-align: none;
+  }
+
+  @media (min-width: @screen-md-min) {
+    .logos-left {
+      text-align: right;
+    }
+
+
+    .logos-right {
+      text-align: left;
+    }
+  }
+}
+
+.section-user-carousel {
+  .carousel {
+    width: 725px;
+    height: 425px;
+
+    @media (max-width: @screen-sm-min) {
+      width: 100%;
+      height: 410px;
+    }
+  }
+
+  .carousel-inner {
+    .logo {
+      padding-bottom: 40px;
+
+      @media (max-width: @screen-sm-max) {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+.section-career-carousel {
+  padding-bottom: 0;
+
+  .carousel {
+    width: 100%;
+    height: 500px;
+
+    @media (max-width: @screen-sm-max) {
+      height: 375px;
+    }
+    @media (max-width: @screen-sm-min) {
+      height: 470px;
+    }
+  }
+
+  .carousel-inner {
+    .item-inner {
+
+      @media (max-width: @screen-xs-max) {
+        text-align: center;
+      }
+      img {
+        float: right;
+        width: auto;
+        height: 500px;
+
+        @media (max-width: @screen-sm-max) {
+          height: 300px;
+        }
+        @media (max-width: @screen-sm-min) {
+          height: 150px;
+        }
+
+        @media(max-width: @screen-sm-min) {
+          float: none;
+        }
+      }
+
+      @media (min-width: @screen-sm-max) {
+        .quote {
+          padding-top: 125px;
+          width: 50%;
+        }
+      }
+
+      @media (max-width: @screen-sm-min) {
+        .quote {
+          text-align: left;
+        }
+      }
+
+    }
+  }
+}
+
+.section-chrome {
+  h2 {
+    color: @palette-bluey;
+  }
+
+  .quote-mark {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .customer-quote {
+    font-size: @font-size-large;
+  }
+
+  .headshot {
+    margin-top: 40px;
+    padding-bottom: 15px;
+    border-radius: 50%;
+    width: 150px;
+  }
+
+  .chrome-web-store-button {
+    margin-top: 80px;
+  }
+}
+
+.section-salesforce {
+  iframe {
+    width: 700px;
+    height: 445px;
+
+    @media (max-width: @screen-md-min) {
+      width: auto;
+      height: 200px;
+    }
+
+  }
+
+  .ptl {
+    .btn-primary {
+      background-color: @brand-primary-light;
+      color: @brand-white;
+    }
+  }
+}
+
+.large-vertical-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section-slack {
+  img {
+    max-width: 90%;
+  }
+}
+.slack-blue-bg {
+  background-color: #09ABD9;
+  color: @brand-white;
+}
+@media (max-width: @screen-md-min) {
+  .screenshot {
+    margin-top: 0;
+  }
+  .after-screenshot {
+    margin-top: 140px !important;
+  }
+}
+.slack-gradient-background {
+  h1.section-header {
+    color: @brand-white;
+    font-size: 28px;
+  }
+
+  .screenshot {
+    margin-top: 40px;
+    margin-bottom: -320px;
+  }
+
+  img {
+    max-width: 90%;
+  }
+
+  color: @brand-white;
+
+  background: rgba(9,174,202,1);
+  background: -moz-linear-gradient(-45deg, rgba(9,174,202,1) 0%, rgba(56,184,152,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(9,174,202,1)), color-stop(100%, rgba(56,184,152,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(9,174,202,1) 0%, rgba(56,184,152,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(9,174,202,1) 0%, rgba(56,184,152,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(9,174,202,1) 0%, rgba(56,184,152,1) 100%);
+  background: linear-gradient(135deg, rgba(9,174,202,1) 0%, rgba(56,184,152,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09aeca', endColorstr='#38b898', GradientType=1 );
+}
+.after-screenshot {
+  margin-top: 270px;
+}
+
+
+.section-numbers {
+  border-top: 1px solid @gray;
+  border-bottom: 1px solid @gray;
+  padding: 25px 0px;
+}
+
+.section-press {
+
+  .press-icon {
+    padding-right: 35px;
+  }
+
+  @media (max-width: @screen-md-min) {
+    .press-icon {
+      padding-bottom: 30px;
+    }
+  }
+
+  .press-icon-left .press-icon-container:last-child .press-icon {
+    padding-right: 0;
+  }
+
+  .press-icon-left, .press-icon-right {
+      text-align: center;
+  }
+
+  @media (min-width: @screen-md-min) {
+    .press-icon-left {
+      text-align: right;
+    }
+
+    .press-icon-right {
+      text-align: left;
+    }
+  }
+}
+
+.section-blog {
+  .blog-image {
+    width: 100%;
+  }
+
+  @media (min-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+    .blog-image {
+      width: auto;
+    }
+  }
+
+  @media (max-width: @screen-md-min) {
+    .blog-post {
+      padding-bottom: 20px;
+    }
+  }
+
+}
+
+.section-jobs {
+  h3 {
+    color: @brand-primary-light;
+    font-size: @font-size-base;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  .job {
+    padding-bottom: 10px;
+    .btn-primary {
+      color: @brand-white;
+      background-color: @brand-primary-light;
+    }
+  }
+}
+
+.section-customers {
+
+  .company-logo-container {
+    height: 70px;
+  }
+
+  .company-logo {
+    max-height: 45px;
+    max-width: 250px;
+    margin-bottom: 25px;
+  }
+
+  .headshot {
+    border-radius: 50%;
+    width: 50px;
+  }
+
+  .person {
+    font-size: @font-size-small;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .row-1 .testimonial {
+    margin-bottom: 100px;
+
+    @media(max-width: @screen-xs) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .row-2 .testimonial {
+    padding-bottom: 100px;
+
+    @media(max-width: @screen-xs) {
+      padding-bottom: 5px;
+    }
+  }
+
+  @media(max-width: @screen-xs) {
+    .col-sm-4 {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.section-customer-logos {
+
+  .ups {
+    padding-right: 20px;
+  }
+
+  @media (max-width: @screen-md-min) {
+    .top-row img {
+      margin-bottom: 20px;
+    }
+
+    img {
+      height: 75px;
+    }
+  }
+}
+
+.section-about-us {
+
+  a {
+    color: @palette-bluey;
+    font-weight: bolder;
+  }
+
+  .team-image {
+    padding-top: 40px;
+  }
+}
+
+.section-contact-us {
+
+  a {
+    color: @palette-bluey;
+    font-weight: bolder;
+  }
+
+  .mail-image {
+    padding-top: 40px;
+  }
+
+  .address-block {
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .contact-address {
+    color: @gray;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid @gray-light;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    @media (max-width: @screen-md-min) {
+      width: 300px;
+    }
+
+    .hq {
+      color: @palette-carrot;
+    }
+
+    .street {
+      color: @gray-darker;
+      font-size: @font-size-large;
+    }
+  }
+}
+
+.section-values {
+  .value {
+    padding-bottom: 20px;
+  }
+}
+
+.section-benefits {
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: @screen-md-min) {
+  .section-investors {
+    img {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.section-leads {
+
+  .leader {
+    padding-bottom: 30px;
+  }
+
+  .headshot {
+    padding-bottom: 15px;
+    width: 150px;
+  }
+}
+
+.section-press-news {
+
+  .press-article {
+    padding-bottom: 20px;
+
+    @media (max-width: @screen-md-min) {
+      padding-bottom: 40px;
+    }
+  }
+  .logo {
+    text-align: center;
+
+    @media (max-width: @screen-sm-max) {
+      text-align: left;
+      padding-bottom: 20px;
+    }
+
+    .wsj {
+      max-width: 100px;
+    }
+  }
+
+  a {
+    color: @palette-bluey;
+    font-weight: bolder;
+  }
+
+  .social-icons {
+    font-size: @font-size-larger;
+
+    a {
+      color: @gray;
+      padding-right: 5px;
+    }
+  }
+
+}
+
+.sub-footer {
+  background-color: @brand-blue;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  h2 {
+    color: @brand-white;
+    font-size: @font-size-large;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 10px 0; // To match up with the button
+    text-align: center;
+
+    @media (max-width: @screen-md-min) {
+      text-align: center;
+    }
+  }
+  small {
+    color: @brand-white;
+    font-size: @font-size-large;
+    font-weight: lighter;
+  }
+
+  p {
+    text-align: center;
+    color: @brand-white;
+
+    @media (max-width: @screen-md-min) {
+      text-align: center;
+      color: @brand-white;
+    }
+  }
+
+  .action {
+    text-align: right;
+
+    @media (max-width: @screen-md-min) {
+      text-align: center;
+    }
+  }
+}
+
+.footer {
+  background-color: @brand-black;
+  color: @brand-white;
+  line-height: 1.7;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  a, a:hover {
+    color: @brand-white;
+  }
+
+  address {
+    line-height: 1.7;
+  }
+
+  .social-icons {
+    font-size: @font-size-large;
+
+    i {
+      background-color: @brand-white;
+      color: @brand-black;
+      border-radius: 50%;
+      padding: 8px;
+    }
+  }
+
+  .datafox-brand, .datafox-brand-mobile {
+    height: 50px;
+  }
+
+  .title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.lost {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: @font-size-larger;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+// custom styling for Smooch chat button
+html body #sk-holder #sk-messenger-button {
+  box-shadow: 5px 5px 15px 0 rgba(0,0,0,1);
+
+  width: 70px;
+  height: 70px;
+
+  @media(max-width: 560px) {
+      right: 20%;
+  }
+
+  @media(max-width: 390px) {
+      right: 30%;
+  }
+
+  @media(max-width: 345px) {
+      right: 50%;
+  }  
+
+  .messenger-button-icon {
+    width: 70px;
+    height: 70px;
+    border: 5px solid @brand-primary;
+  }
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.modal {
+  @media (min-width: @screen-md-min) {
+    .modal-lg {
+      width: 700px;
+    }
+    .border-right {
+      border-right: none;
+    }
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .modal-padding {
+    padding: 30px;
+  }
+  .border-left {
+    border-left: 1px solid @gray-light;
+    margin-left: -1px;
+  }
+  .border-right {
+    border-right: 1px solid @gray-light;
+  }
+  .border-top {
+    border-top: 1px solid @gray-light;
+  }
+  // override marketo's heinous inline styling
+  form.mktoForm.mktoHasWidth {
+    width: 100% !important;
+    margin: 0 !important;
+
+    @media (min-width: @screen-md-min) {
+      // put the first two fields (first name, last name) on the same line
+      // and the 4th & 5th on the same line
+      .mktoFormRow:nth-of-type(1) {
+        width: 50% !important;
+        padding-right: 5px;
+      }
+      .mktoFormRow:nth-of-type(2) {
+        width: 50% !important;
+        padding-left: 5px;
+      }
+      .mktoFormRow:nth-of-type(4) {
+        width: 50% !important;
+        padding-right: 5px;
+      }
+      .mktoFormRow:nth-of-type(5) {
+        width: 50% !important;
+        padding-left: 5px;
+      }
+    }
+
+    .mktoFormRow {
+      width: 100% !important;
+
+      .mktoFieldDescriptor, .mktoFieldWrap {
+        float: none !important;
+        margin-bottom: 0 !important;
+      }
+
+      label.mktoLabel {
+        width: 100% !important;
+      }
+
+      .mktoField {
+        width: 100% !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        height: initial;
+      }
+
+      textarea.mktoField {
+        border-color: rgb(238, 238, 238) !important;
+        padding: 5px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+    .mktoButtonRow {
+      width: 100% !important;
+
+      .mktoButton {
+        margin-top: 10px !important;
+        .btn !important;
+        .btn-primary !important;
+        .btn-block !important;
+        text-transform: uppercase;
+        .btn-primary {
+          color: @brand-white;
+          background-color: @brand-primary-light;
+        }
+
+      }
+    }
+    select {
+      .form-control;
+      border-color: rgb(238, 238, 238) !important;
+      border-radius: 0 !important;
+      height: 45px !important;
+    }
+  }
+
+  input {
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+  input.form-control {
+    border-radius: 0;
+    border-color: @gray-light;
+    box-shadow: none;
+    padding: 10px 12px;
+    height: 40px;
+  }
+  .btn {
+    padding: 10px 12px;
+  }
+  .carousel {
+    height: 250px;
+    .lead, .user {
+      font-size: @font-size-small;
+      text-transform: initial;
+    }
+    .sentence2 {
+      display: none;
+    }
+    img.logo {
+      max-width: 100%;
+      max-height: 30px;
+      margin-bottom: 10px;
+    }
+    .carousel-indicators {
+      bottom: 0;
+    }
+  }
+
+}
+
+.tos {
+  ol {
+    padding-left: 5px;
+    padding-top: 10px;
+
+    li {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+
+.enrich-page, .signals-page {
+  .bg-blurred1 {
+    background: no-repeat center url("/img/product/blurred/1.jpg");
+    background-size: cover;
+  }
+  .bg-blurred2 {
+    background: no-repeat center url("/img/product/blurred/2.jpg");
+    background-size: cover;
+  }
+  .bg-blurred3 {
+    background: no-repeat center url("/img/product/blurred/3.jpg");
+    background-size: cover;
+  }
+  .bg-experts {
+    background: no-repeat center url("/img/product/enrich/experts.jpg");
+    background-size: cover;
+  }
+  .bg-api {
+    background: no-repeat center url("/img/product/signals/api.jpg");
+    background-size: cover;
+  }
+  .bg-conference {
+    background: no-repeat center url("/img/product/prospect/conference.jpg");
+    background-size: cover;
+  }
+  .align-right {
+    text-align: right;
+  }
+  .subfooter {
+    background-color: @brand-blue;
+    color: @brand-white;
+  }
+}
+
+
+// temporarily override default styling, while we move to new style
+.enrich-page, .signals-page {
+  .section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .btn-primary {
+    background-color: @brand-white;
+  }
+}
+
+.quote1 {
+  height: 250px;
+
+  @media(max-width: @screen-lg) {
+    height: 300px;
+  }
+}
+.quote2 {
+  height: 80px;
+
+  @media(max-width: @screen-lg) {
+    height: 100px;
+  }
+}
+
+.quote {
+  display: table;
+  // force the text to display over the photo
+  position: relative;
+  z-index: 100;
+
+  @media(max-width: @screen-sm) {
+    max-width: 400px;
+    min-width: 350px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  @media(max-width: @screen-xs){
+  }
+
+  .img {
+    display: table-cell;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .title {
+    display: table-cell;
+    font-style: italic;
+    padding-left: 10px;
+    font-size: @font-size-small;
+    .text-muted;
+  }
+}
+.subfooter {
+  .section;
+  text-align: center;
+  color: @brand-blue;
+  background-color: @brand-white;
+  margin: 0 -10px;
+
+  .btn-primary {
+    background-color: @brand-white;
+    color: @brand-blue;
+  }
+
+}
+
+.visible-xs-and-sm {
+  display: none;
+}
+@media (max-width: @screen-sm-max) {
+  .hidden-xs-and-sm {
+    display: none;
+  }
+  .visible-xs-and-sm {
+    display: block;
+  }
+}
+
+.align-middle-outer {
+  display: table;
+  width: 100%;
+
+  .align-middle {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.bottom-border {
+  border-bottom: 1px solid @gray-light;
+}
+
+// add support for sticking navbars to the top on scroll
+.sticky.stuck {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}

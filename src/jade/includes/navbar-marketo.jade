@@ -1,0 +1,109 @@
+//- Navigation bar
+nav.main-nav.navbar.navbar-default.navbar-fixed-top
+  div.container
+
+    //- Brand and toggle get grouped for better mobile display
+    div.navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="/")
+        //- Normal header shown on small screens and desktops
+        img.datafox-brand(src='/img/datafox-logo-white2.png', alt='DataFox Logo')
+
+    //- Collect the nav links, forms, and other content for toggling
+    div.collapse.navbar-collapse(id='bs-example-navbar-collapse-1')
+      ul.nav.navbar-nav
+        li.dropdown(class=currentTab == 'product' ? 'active' : '')
+          a.dropdown-toggle(href='/product/', data-toggle='dropdown', role='button', aria-haspopup="true", aria-expanded="false") Product
+            if currentTab == 'product'
+              span.sr-only (current)
+            span.caret
+
+          ul.dropdown-menu
+            li
+              a(href='/product/?tab=enrich') Data Cleanse and Enrich
+            li
+              a(href='/product/?tab=find-prospects') Prospecting Platform
+            li
+              a(href='/product/?tab=company-signals') Company Signals
+
+        li.dropdown(class=currentTab == 'customer' ? 'active' : '')
+          if currentTab == 'customer'
+            span.sr-only (current)
+
+          a.dropdown-toggle(href='/customers/', data-toggle='dropdown', role='button', aria-haspopup="true",aria-expanded="false") Use Cases
+            if currentTab == 'customers'
+              span.sr-only (current)
+            span.caret
+
+          ul.dropdown-menu
+            li
+              a(href='/who-benefits/?tab=sales') Sales Development
+            li
+              a(href='/who-benefits/?tab=sales-ops') Account Management
+            li
+              a(href='/who-benefits/?tab=marketing') Sales operations
+
+        li.dropdown(class=currentTab == 'resources' ? 'active' : '')
+          a.dropdown-toggle(href='/company/resources/', data-toggle='dropdown', role='button', aria-haspopup="true", aria-expanded="false") Resources
+            if currentTab == 'resources'
+              span.sr-only (current)
+            span.caret
+
+          ul.dropdown-menu
+            li
+              a(href='javascript:void(0)') Free Tools
+            li
+              a(href='/tour/chrome/').mll Chrome
+            li
+              a(href='/tour/slack/').mll Slack
+            li
+              a(href='/company/resources/') Resource Center
+            li
+              a(href='/customers') Customers
+
+        li.dropdown(class=currentTab == 'integration' ? 'active' : '').hidden-sm
+          if currentTab == 'integration'
+            span.sr-only (current)
+
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup="true", aria-expanded="false") Integrations
+            if currentTab == 'integrations'
+              span.sr-only (current)
+            span.caret
+
+          ul.dropdown-menu
+            li
+              a(href='/tour/chrome/') Chrome
+            li
+              a(href='/tour/marketo/') Marketo
+            li
+              a(href='/tour/salesforce/') Salesforce
+            li
+              a(href='/tour/slack/') Slack
+
+        li.dropdown(class=currentTab == 'company' ? 'active' : '')
+          a.dropdown-toggle(href='/company/', data-toggle='dropdown', role='button', aria-haspopup="true",aria-expanded="false") Company
+            if currentTab == 'company'
+              span.sr-only (current)
+            span.caret
+
+          ul.dropdown-menu
+            li
+              a(href='/company') About Us
+            li
+              a(href='/company/leadership/') Leadership
+            li
+              a(href='/company/press/') Press
+            li
+              a(href='/company/careers/') Careers
+
+
+      ul.nav.navbar-nav.navbar-right
+        li.hidden-sm
+          a(href='https://app.datafox.com') Log In
+        li
+          a.signup.trial-btn(data-toggle="modal", data-target=".default-request-demo-modal", href="#")
+            | Sign Up

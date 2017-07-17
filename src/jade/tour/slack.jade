@@ -1,0 +1,96 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+    link(href='/css/simpletextrotator.css', rel='stylesheet')
+
+    //- Specific to this page
+    meta(name='keywords', content='slack, alerts, company news, triggers, company signals')
+    meta(name='description', content='DataFox alerts provide instantaneous notifications when current or new prospects reach key milestones - whether a tracked account is in the news, a new company meets your headcount criteria, or a startup in your territory hires an executive.')
+    title DataFox | Slack Integration
+
+  body
+
+    //- Header
+    - currentTab = 'integration'
+    include ../includes/navbar-marketo.jade
+
+    div.section.slack-gradient-background.page-top-plain
+      div.container
+        div.row.text-center
+          div.col-md-10.col-md-offset-1
+            h1.section-header Get instant notifications on your
+              = ' '
+              span.rotate-text
+                | competitors, top prospects, new leads, customers, investments
+              = '.'
+
+            p DataFox’s Slack integration lets you know instantly when companies you care about reach key milestones such as office openings and new hires.
+
+            div.mtl
+              // this includes a copy of SLACK_CLIENT_ID
+              a(href="https://slack.com/oauth/authorize?client_id=3381813695.41803477366&scope=channels:read,chat:write:bot&redirect_uri=https://app.datafox.com/api/slack/callback&state=register-slack")
+                img(src='/img/tour/add-to-slack.png', alt='Add to Slack')
+
+            div.mtl
+              img(src='/img/tour/slack-competitive-intel.png', alt='Slack integration screenshot').screenshot
+
+
+
+    div.container-fluid.page-tabs-row.section-bottom-border.section-slack.large-vertical-padding.after-screenshot
+      div.container
+        div.row
+          div.col-md-5.text-center
+            img(src='/img/tour/triggers.png', alt='alerts')
+          div.col-md-5.col-md-offset-1
+            h3 Get hard-to-find company information and news
+            p DataFox has the largest, most granular scope of company insights available. We ingest millions of data points across various sources and filter them down by applying machine-learning algorithms and natural language processing. We give you the actionable company signals you need but don’t have the time or the resources to uncover.
+
+
+    div.container-fluid.page-tabs-row.section-bottom-border.section-slack.large-vertical-padding
+      div.container
+        div.row
+          div.col-md-5.text-center
+            img(src='/img/tour/select-triggers.png', alt='Select granular alert settings')
+          div.col-md-5.col-md-offset-1
+            h3 Receive customized alerts instantly
+            p Unlike endless online searches and noisy Google Alerts, DataFox alerts are highly targeted and always relevant. You can customize your alerts from 40+ granular types of signals, such as any time a competitor makes the news, or a Californian fintech company hires a new VP of Sales. Then, connect DataFox to Slack to instantly receive specific alerts in specific Slack channels.
+
+
+
+    div.container-fluid.page-tabs-row.section-bottom-border.section-slack.large-vertical-padding.slack-blue-bg.text-center
+      div.row
+        div.col-xs-12
+          h2 Set up Your Slack Alerts Now
+          p.mvl Get started for free in less than 2 minutes.
+          div.mtl
+            // this includes a copy of SLACK_CLIENT_ID
+            a(href="https://slack.com/oauth/authorize?client_id=3381813695.41803477366&scope=channels:read,chat:write:bot&redirect_uri=https://app.datafox.com/api/slack/callback&state=register-slack")
+              img(src='/img/tour/add-to-slack.png', alt='Add to Slack')
+          div.mtl
+            img(src='/img/tour/connect.png', alt='Connect Slack to DataFox graphic')
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade
+    script(src='/js/jquery.simple-text-rotator.min.js')
+
+    script(type="text/javascript").
+      $(function() {
+        $(".rotate-text").textrotator({
+          animation: "flipCubeUp",
+          separator: ",",
+          speed: 4000
+        });
+      });
+
+    style.
+      .rotate-text {
+        display: inline-block;
+        width: 220px;
+        border-bottom: 3px solid white;
+      }
+
+

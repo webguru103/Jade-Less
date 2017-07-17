@@ -1,0 +1,104 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    //- meta(name='keywords', content='datafox, founders, team, advisors, investors')
+    //- meta(name='description', content='DataFox\'s story, investors and advisors.')
+    title DataFox | Leadership
+
+  body
+
+    //- Header
+    - currentTab = 'company'
+    - trackingCurrentPage = 'leadership'
+    include ../includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.leadership
+      div.container.page-top-content
+        div.row.text-center
+          h1 Meet Our Team
+
+    div.container-fluid.section-bottom-border.text-center
+      div.container.section.section-leads
+        div.row
+          h2.section-header Leadership
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/lead/bas.jpg', alt='Bastiaan Janmaat')
+                h3.mtn Bastiaan Janmaat, CEO
+                p Bastiaan sets the strategic vision of DataFox, as he has done since its founding in 2013. Prior to DataFox, he honed his prospecting skills identifying growing tech companies at Goldman Sachs. He is a graduate of the Universiteit van Tilburg in the Netherlands and the Stanford Graduate School of Business.
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/lead/mike.jpg', alt='Mike Dorsey')
+                h3.mtn Mike Dorsey, COO
+                p Mike manages DataFox’s operations, with a focus on product, data, and customer success. He received advanced degrees in international economics and finance before earning a joint engineering MS-MBA from Stanford University. He previously co-founded a profitable SaaS company offering demand generation and CRM.
+        div.row
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/lead/ben.jpg', alt='Ben Trombley')
+                h3.mtn Ben Trombley, CTO
+                p Ben manages DataFox’s engineering team and oversees the technical side of the company. He came to DataFox from Box, where designed and built core frameworks, led a team of senior engineers, and helped the organization scale from 60 to 1,000 employees. He received a BS in computer science from Stanford University.
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/lead/alden.jpg', alt='Alden Timme')
+                h3.mtn Alden Timme, Chief Data Scientist
+                p Alden is responsible for DataFox’s natural language processing, keyword similarity and scoring. He holds a BS and MS in computer science from Stanford University, where he specialized in NLP, and was pursuing a PhD in statistics there before leaving to found DataFox and give his research a real-world application.
+
+    div.container-fluid.section-bottom-border.text-center
+      div.container.section.section-investors
+        div.row
+          div.col-md-6
+            div.row
+              div.col-sm-6
+                img.img-mobile(src='/img/company/investor/goldman.png',alt='Goldman Sachs')
+              div.col-sm-6
+                img.img-mobile(src='/img/company/investor/greenvisor.png', alt='Green Visor Capital')
+          div.col-md-6
+            div.row
+              div.col-sm-6
+                img.img-mobile(src='/img/company/investor/ventures.png', alt='Google Ventures')
+              div.col-sm-6
+                img.img-mobile(src='/img/company/investor/stanford.png', alt='Stanford')
+
+    div.container-fluid.section-bottom-border.text-center
+      div.container.section.section-leads
+        div.row
+          h2.section-header Advisors
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/advisor/erik.png',alt='Erik Nierenberg')
+                h3.mtn Erik Nierenberg
+                p Erik is an advisor to several high-growth startups and nonprofits.  Most recently Erik was SVP and GM of Enterprise at Lynda.com, which was acquired by LinkedIn. Before Lynda.com Erik spent seven years in executive roles at Salesforce across sales, marketing, business development and product management.  He started his career as a Bain consultant and venture investor at Enterprise Partners.
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/advisor/steve.png',alt='Steve Alesio')
+                h3.mtn Steve Alesio
+                p Steve is currently an operating partner at Providence Equity. Prior to that, he headed Dun &amp; Bradstreet Corporation, serving in various senior leadership positions, including senior vice president, president and COO, and was elected to the board of directors. He spent 19 years with American Express, where he served in marketing and general management roles.
+        div.row
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/advisor/ram.png',alt='Ram Shriram')
+                h3.mtn Ram Shriram
+                p Ram is a founding board member at Google and {24}7 and is on the boards of Zazzle and Paperless Post.  He was an executive at Netscape, Amazon and Junglee and is the founder of Sherpalo, a venture capital firm that invests in promising disruptive technologies with a portfolio including DocuSign and Optimizely.
+
+          div.col-md-6.leader
+            div.row
+              div.col-sm-10.col-sm-offset-1
+                img.headshot(src='/img/company/advisor/martina.png',alt='Martina Cheung')
+                h3.mtn Martina Cheung
+                p Martina is an executive managing director at S&amp;P Capital IQ, where she is responsible for monetizing and leveraging McGraw Hill Financial’s intellectual property. She previously worked as the chief strategy officer at McGraw Hill Financial and as a managing director at Standard &amp; Poor’s.
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade

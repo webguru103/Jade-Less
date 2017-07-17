@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    meta(name='keywords', content='company profile, competitor profile, investor, comps list')
+    meta(name='description', content='Find qualified prospects and start the sales conversation without leaving the page.')
+    title DataFox | Company Profile and Competitor Chrome Extension
+
+  body
+
+    //- Header
+    - currentTab = 'integration'
+    - trackingCurrentPage = 'chrome-ext'
+    include ../includes/navbar-marketo.jade
+
+    div.container.section.page-top-plain.section-chrome
+      div.row
+        div.col-md-10.col-md-offset-1
+          h1.section-header.text-center The DataFox Chrome Extension
+
+          .text-center
+            a(href='https://chrome.google.com/webstore/detail/datafox-profiles/empjbdlkdcfdeebijbhfebjmchnfhono', target='_new')
+              img.img-mobile(src='/img/tour/chrome-download-now.png', alt='Download now from Chrome web store')
+
+          p.pvl.text-center
+            img.img-responsive(src='/img/tour/chrome-screenshot.jpg', alt='Screenshot of Chrome Extension')
+
+          .text-center.quote-mark
+            img(src="/img/tour/chrome/quote.png", alt="quote mark")
+
+          .text-center
+            p.customer-quote I can't recomend this extension highly enough &mdash; it streamlines my research process and enables me to pull up relevant company details (funding, company news, etc.) all without leaving the company's website and toggling between a lot of different sources.  It's a fantastic tool to automate prospecting and drill into important company insights.  I'm a huge fan!
+
+          .text-center
+            img(src="/img/tour/chrome/julia.png", alt="Julia Laine, Silversmith Capital").headshot
+
+          .text-center
+            h4
+              strong JULIA LAINE
+              div.mtm
+                em Silversmith Capital
+
+
+          .text-center.chrome-web-store-button
+            a(href='https://chrome.google.com/webstore/detail/datafox-profiles/empjbdlkdcfdeebijbhfebjmchnfhono', target='_new')
+              img.img-mobile(src='/img/tour/chrome-link.png',alt='Chrome Web Store icon')
+
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade

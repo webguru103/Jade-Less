@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    meta(name='keywords', content='api, company profile, competitor profile, investor, comps list')
+    meta(name='description', content='Use DataFox company, Salesforce and competitor information however you want it.')
+    title DataFox | Company Profile and Competitor API
+
+  body
+
+    //- Header
+    - currentTab = 'integration'
+    - trackingCurrentPage = 'api'
+    include ../includes/navbar-marketo.jade
+
+    div.container.section.page-top-plain
+      div.row
+        div.col-md-10.col-md-offset-1
+          h1.section-header.text-center Get DataFox data wherever you need it
+          p Automate your grunt work. Enhance  your existing models and scoring algorithms with more data points, set up your own alerts for milestones your team cares about, and revitalize your CRM with auto-refreshing data. The possibilities are endless.
+          p.mbn Query our database to create lists in bulk and answer questions like:
+            ul
+              li What recent news events can your sales team use as a reason to contact prospects?
+              li What characteristics/keywords do all your customers share?
+              li Which companies are similar to your customers and prospects at a minimum 80% confidence level?
+              li Which of your customers have been in the news recently?
+
+          p.pvl.text-center
+            img.img-responsive(src='/img/tour/api.png',alt='')
+          p.ptl.mtl.text-center
+            a.btn.btn-primary.btn-full.mrl(href="https://www.datafox.com/docs/api/") View The Docs
+            a.btn.btn-bordered-reg(href='mailto:sales@datafox.com?subject=DataFox API') Contact Sales
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade

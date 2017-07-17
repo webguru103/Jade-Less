@@ -1,0 +1,36 @@
+//- NOTE: this is used in multiple locations, so check both index.jade and register modal
+
+mixin customerCarousel(prefix)
+  if !prefix
+    - prefix = ''
+
+  //- Add data-interval='false' to test this without it moving
+  .carousel.slide(data-ride='carousel',data-interval='10000', class=prefix + 'carousel-users')
+    //- Indicators
+    div.text-center
+      ol.carousel-indicators.text-center
+        li(data-target="." + prefix + "carousel-users", data-slide-to="0").active
+        li(data-target="." + prefix + "carousel-users", data-slide-to="1")
+        li(data-target="." + prefix + "carousel-users", data-slide-to="2")
+
+    //- Wrapper for slides
+    div.carousel-inner(role="listbox").text-left
+      div.item.active
+        div.item-inner
+          img.logo(src='/img/homepage/quotes/twilio.png', alt='Twilio logo')
+          p.lead
+            em "Our outbound reps used to spend over half their day on research and data input.  With DataFox, our reps spend more time actually calling on prospects, with personalized messages that open doors to valuable conversations.
+              span.sentence2 In addition, our customer success managers know which clients to contact with the right message at the right time.   Our productivity has gone way up!"
+          p.user Casey Clegg, Sr. Director, Strategic Account Management
+      div.item
+        div.item-inner
+          img.logo(src='/img/customers/rainforestqa.png', height=120, alt='RainforestQA logo')
+          p.lead
+            em "With all the new prospects that DataFox has uncovered, Rainforest QA was able to scale our outbound sales development team from 2 to 5 members."
+          p.user Jake Biskar, Head of Sales Development
+      div.item
+        div.item-inner
+          img.logo(src='/img/customers/netapp.png', alt='NetApp logo')
+          p.lead
+            em "In my scouting work for strategic investment opportunities, I sometimes meet with up to 3 or 4 companies a day.  DataFox helps me find new startups in areas of strategic interest and provides analytics to help prioritize my engagements."
+          p.user Steve Proffitt, Sr. Manager Corporate Development

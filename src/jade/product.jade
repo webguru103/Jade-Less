@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include includes/header.jade
+
+    //- Specific to this page
+    meta(name='description', content='Helping sales operations increase efficiency, marketers find new audiences and SDRs expand their territory.')
+    meta(name='keywords', content='new prospects, account-based marketing, company signals, sales triggers, news events, prospecting tools')
+    title DataFox | Prospect Faster, Find More Leads and Nail Account-Based Marketing
+
+  body
+
+    //- Header
+    - currentTab = 'product'
+    - trackingCurrentPage = 'product'
+    include includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.product
+      div.container.page-top-content
+        div.row.text-center
+          h1 Prospecting Misery Ends Here
+          p DataFox helps B2B companies to target the right accounts at the right time and keep their databases up-to-date throughout the customer lifecycle.
+          div.mtl
+            a.trial-btn.btn.btn-primary.btn-full(data-toggle="modal", data-target=".default-request-demo-modal", href="javascript:void(0)", data-location='product-hero') Get Started Today
+
+
+    div.sticky-anchor
+    div.sticky
+      div.page-tabs.page-tabs-product
+        div.container
+          div.row.page-tabs-row
+            ul.nav.nav-tabs.three-tab(role="tablist")
+              li(role='presentation')
+                a(href='#enrich',data-location="product",arial-control='marketing',role='tab',data-toggle='tab')
+                  img(src='/img/product/clean.png', alt='').unselected
+                  img(src='/img/product/clean_selected.png', alt='').selected
+                  span.mlm.hidden-xs Data Cleanse and Enrich
+
+              li.active(role='presentation')
+                a(href='#find-prospects',data-location="product", aria-controls='home',role='tab',data-toggle='tab')
+                  img(src='/img/product/prospect.png', alt='').unselected
+                  img(src='/img/product/prospect_selected.png', alt='').selected
+                  span.mlm.hidden-xs Prospect Faster
+
+              li(role='presentation')
+                a(href='#company-signals',data-location="product",arial-controls='company-signals',role='tab',data-toggle='tab')
+                  img(src='/img/product/signal.png', alt='').unselected
+                  img(src='/img/product/signal_selected.png', alt='').selected
+                  span.mlm.hidden-xs Company Signals
+
+
+    div.tab-content.page-tabs-content
+      #find-prospects.tab-pane.fade.in.active(role='tabpanel')
+        include includes/product/find-prospects.jade
+      #company-signals.fade.tab-pane(role='tabpanel')
+        include includes/product/signals.jade
+      #enrich.fade.tab-pane(role='tabpanel')
+        include includes/product/enrich.jade
+
+
+    include includes/footer.jade
+
+    include includes/js/javascript.jade

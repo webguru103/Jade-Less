@@ -1,0 +1,168 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    //- meta(name='description', content='')
+    //- meta(name='author', content='')
+    title DataFox | Press
+
+  body
+
+    //- Header
+    - currentTab = 'company'
+    - trackingCurrentPage = 'press'
+    include ../includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.press
+      div.container.page-top-content
+        div.row.text-center
+          h1 Newsroom
+
+    div.container.section.section-press-news
+      div.row
+        div.col-md-8
+          h2.section-header In The News
+
+          div.row.press-article
+            div.col-sm-3.logo
+              img(src='/img/press/forbes.png')
+            div.col-sm-8.col-sm-offset-1
+              p
+                a(href='http://www.forbes.com/sites/alexkonrad/2015/07/22/goldman-sachs-and-visas-ex-chairman-bet-5-million-on-datafox/',target="_blank") Goldman Sachs And Visa's Ex-Chairman Bet Millions On Young Startup DataFox's Predictive Insights
+              p.mbn July 22, 2015
+              p.social-icons
+                a(href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.forbes.com/sites/alexkonrad/2015/07/22/goldman-sachs-and-visas-ex-chairman-bet-5-million-on-datafox/&title=Goldman%20Sachs%20And%20Visa's%20Ex-Chairman%20Bet%20Millions%20On%20Young%20Startup%20DataFox's%20Predictive%20Insights&summary=&source=",target="_blank")
+                  i.fa.fa-linkedin-square.mrs(aria-hidden="true")
+                  span.sr-only Share on LinkedIn
+
+                a(href="https://twitter.com/home?status=Goldman%20Sachs%20%26%20Visa's%20Ex-Chairman%20Bet%20Millions%20On%20Young%20Startup%20DataFox%20http%3A//onforb.es/1OWQHI4%20by%20%40Forbes%20cc%20%40datafoxco")
+                  i.fa.fa-twitter-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Twitter
+
+                a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A//www.forbes.com/sites/alexkonrad/2015/07/22/goldman-sachs-and-visas-ex-chairman-bet-5-million-on-datafox/',target="_blank")
+                  i.fa.fa-facebook-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Facebook
+
+          div.row.press-article
+            div.col-sm-3.logo
+              img(src='/img/press/venturebeat.png')
+            div.col-sm-8.col-sm-offset-1
+              p
+                a(href='http://venturebeat.com/2015/07/22/datafox-raises-5m-to-push-its-tool-for-tracking-private-companies/',target="_blank") DataFox Raises $5M to Push Its Tool for Tracking Private Companies
+              p.mbn July 22, 2015
+              p.social-icons
+                a(href='https://www.linkedin.com/shareArticle?mini=true&url=http%3A//venturebeat.com/2015/07/22/datafox-raises-5m-to-push-its-tool-for-tracking-private-companies/&title=DataFox%20Raises%20$5M%20to%20Push%20Its%20Tool%20for%20Tracking%20Private%20Companies&summary=&source=',target="_blank")
+                  i.fa.fa-linkedin-square.mrs(aria-hidden="true")
+                  span.sr-only Share on LinkedIn
+
+                a(href='https://twitter.com/home?status=DataFox%20raises%20$5M%20to%20push%20its%20tool%20for%20tracking%20private%20companies%20http%3A//bit.ly/1K94U7V%20by%20%40venturebeat%20cc%20%40datafoxco',target="_blank")
+                  i.fa.fa-twitter-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Twitter
+
+                a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A//venturebeat.com/2015/07/22/datafox-raises-5m-to-push-its-tool-for-tracking-private-companies/',target="_blank")
+                  i.fa.fa-facebook-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Facebook
+
+          div.row.press-article
+            div.col-sm-3.logo
+              img(src='/img/press/cnbc-lrg.png')
+            div.col-sm-8.col-sm-offset-1
+              p
+                a(href='http://video.cnbc.com/gallery/?video=3000291312', target="_blank") Big Data for Everyone
+              p.mbn July 10, 2014
+              p.social-icons
+                a(href='https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.facebook.com/sharer/sharer.php?u=http%253A//video.cnbc.com/gallery/?video=3000291312&title=Big%20Data%20for%20Everyone&summary=&source=',target="_blank")
+                  i.fa.fa-linkedin-square.mrs(aria-hidden="true")
+                  span.sr-only Share on LinkedIn
+
+                a(href='https://twitter.com/home?status=Big%20Data%20for%20Everyone%20http%3A//cnb.cx/1ShJYNm%20by%20%40CNBC%20cc%20%40datafoxco',target="_blank")
+                  i.fa.fa-twitter-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Twitter
+
+                a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A//video.cnbc.com/gallery/?video=3000291312',target="_blank")
+                  i.fa.fa-facebook-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Facebook
+
+          div.row.press-article
+            div.col-sm-3.logo
+              img(src='/img/press/fox.png')
+            div.col-sm-8.col-sm-offset-1
+              p
+                a(href='http://video.foxbusiness.com/v/3668062736001/reformed-banker-creates-data-platform-that-tracks-private-companies/#sp=show-clips',target="_blank") Reformed banker creates data platform to track private companies
+              p.mbn July 10, 2014
+              p.social-icons
+                a(href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//video.foxbusiness.com/v/3668062736001/reformed-banker-creates-data-platform-that-tracks-private-companies/%23sp=show-clips&title=Reformed%20banker%20creates%20data%20platform%20to%20track%20private%20companies&summary=&source=",target="_blank")
+                  i.fa.fa-linkedin-square.mrs(aria-hidden="true")
+                  span.sr-only Share on LinkedIn
+
+                a(href="https://twitter.com/home?status=Reformed%20banker%20creates%20data%20platform%20to%20track%20private%20companies%20http%3A//bit.ly/20yEv7C%20by%20%40FoxBusiness%20cc%20%40datafoxco")
+                  i.fa.fa-twitter-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Twitter
+
+                a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A//video.foxbusiness.com/v/3668062736001/reformed-banker-creates-data-platform-that-tracks-private-companies/%23sp=show-clips')
+                  i.fa.fa-facebook-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Facebook
+
+          div.row.press-article
+            div.col-sm-3.logo
+              img(src='/img/press/bloomberg-lrg.png')
+            div.col-sm-8.col-sm-offset-1
+              p
+                a(href='http://www.bloomberg.com/news/videos/b/18b0b183-209b-41c4-87b2-a6ea231b89c7',target="_blank") Here’s How to Rank Private Companies Using Big Data
+              p.mbn June 24, 2014
+              p.social-icons
+                a(href='https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.bloomberg.com/news/videos/b/18b0b183-209b-41c4-87b2-a6ea231b89c7&title=Here%E2%80%99s%20How%20to%20Rank%20Private%20Companies%20Using%20Big%20Data&summary=&source=',target="_blank")
+                  i.fa.fa-linkedin-square.mrs(aria-hidden="true")
+                  span.sr-only Share on LinkedIn
+
+                a(href='https://twitter.com/home?status=Here%E2%80%99s%20How%20to%20Rank%20Private%20Companies%20Using%20Big%20Data%20http%3A//bloom.bg/1lPuhAe%20by%20%40business%20cc%20%40datafoxco')
+                  i.fa.fa-twitter-square.mrs(aria-hidden="true",target="_blank")
+                  span.sr-only Share on Twitter
+
+                a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A//www.bloomberg.com/news/videos/b/18b0b183-209b-41c4-87b2-a6ea231b89c7')
+                  i.fa.fa-facebook-square.mrs(aria-hidden="true",target="_blank")
+                  span.sr-only Share on Facebook
+
+          div.row.press-article
+            div.col-sm-3.logo
+              img.wsj(src='/img/press/wsj-sm.png')
+            div.col-sm-8.col-sm-offset-1
+              p
+                a(href='http://blogs.wsj.com/venturecapital/2014/02/03/the-daily-startup-google-ventures-backs-datafox-to-help-find-investable-companies/',target="_blank") Google Ventures Backs DataFox to Help Find “Investable” Ventures
+              p.mbn Feb 3, 2014
+              p.social-icons
+                a(href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//blogs.wsj.com/venturecapital/2014/02/03/the-daily-startup-google-ventures-backs-datafox-to-help-find-investable-companies/&title=Google%20Ventures%20Backs%20DataFox%20to%20Help%20Find%20%E2%80%9CInvestable%E2%80%9D%20Ventures&summary=&source=",target="_blank")
+                  i.fa.fa-linkedin-square.mrs(aria-hidden="true")
+                  span.sr-only Share on LinkedIn
+
+                a(href="https://twitter.com/home?status=Google%20Ventures%20Backs%20DataFox%20to%20Help%20Find%20%E2%80%9CInvestable%E2%80%9D%20Ventures%20http%3A//on.wsj.com/1kOAcAj%20by%20%40WSJ%20cc%20%40datafoxco")
+                  i.fa.fa-twitter-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Twitter
+
+                a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A//blogs.wsj.com/venturecapital/2014/02/03/the-daily-startup-google-ventures-backs-datafox-to-help-find-investable-companies/')
+                  i.fa.fa-facebook-square.mrs(aria-hidden="true")
+                  span.sr-only Share on Facebook
+
+
+        div.col-md-3.col-md-offset-1
+          h2.section-header Resources
+          p Press inquiries: Please contact &nbsp;
+            a(href="tel:1-415-814-9068") (415) 814-9068
+            |  or &nbsp;
+            a(href='mailto:press@datafox.com') press@datafox.com
+
+          p Download our logos: &nbsp;
+            a(href='/img/DataFox-Logos.zip') DataFox-Logos.zip
+
+          p For additional resources including team photos, b-roll and interview requests, please contact &nbsp;
+            a(href='mailto:press@datafox.com') press@datafox.com
+            | .
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade
+

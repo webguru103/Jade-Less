@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    //- meta(name='keywords', content='datafox, founders, team, advisors, investors')
+    //- meta(name='description', content='DataFox\'s story, investors and advisors.')
+    title DataFox | About Us
+
+  body
+
+    //- Header
+    - currentTab = 'company'
+    - trackingCurrentPage = 'about-us'
+    include ../includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.about-us
+      div.container.page-top-content
+        div.row.text-center
+          h1 We Are DataFox
+          p.lead.pvm
+            em Making every sales conversation personal.
+
+    div.container.section.section-about-us
+      div.row
+        div.col-md-6.text-center
+          img(src='/img/company/about-team.png',alt='DataFox team photos').team-image.img-mobile
+        div.col-md-5.col-md-offset-1
+          h2.section-header Our Story
+          p DataFox was founded in 2013 to solve the biggest headaches facing today’s strategic sellers: researching prospects, discovering the perfect reason to call, and switching between too many tabs to get basic information. We’re a team of Salesforce veterans, engineers from Box, and data scientists from LinkedIn, and we’re taking the grunt work out of sales.
+          p DataFox is built by salespeople for salespeople. We’re committed to helping our customers find prospects faster, personalize calls and stay up to date on their existing accounts. Our machine learning algorithms sift through over a million companies and news sources to bring you business signals, qualified prospects and the perfect answer to “why you, why now.” &nbsp;
+            a(href="/company/careers/") (and we're hiring!)
+
+    div.container.section.section-contact-us
+      div.row
+        div.col-md-6.text-center
+          img(src='/img/company/about-mail.png',alt='')
+        div.col-md-5.col-md-offset-1
+          h2.section-header Contact Us
+          p
+            | We’re located in the heart of San Francisco’s SOMA district. Call us at &nbsp;
+            a(href="tel:1-415-969-2144") (415) 969-2144
+            |  or drop us a note at &nbsp;
+            a(href="mailto:info@datafox.com") info@datafox.com
+
+          p
+            | For press inquiries, please contact &nbsp;
+            a(href="tel:1-415-814-9068") (415) 814-9068
+            |  or email &nbsp;
+            a(href="mailto:press@datafox.com") press@datafox.com
+          span.address-block
+            a(href='https://www.google.com/maps/@37.7799835,-122.403038,3a,75y,195.54h,84.38t/data=!3m6!1e1!3m4!1sOffK19EE8h2z-xY1mqtMmA!2e0!7i13312!8i6656', target="_blank")
+              div.contact-address.mtl
+                img(src='/img/company/about-bridge.png',alt='Golden Gate bridge icon').bridge-icon.plm.prl.pts.pbm.pull-left
+                span.hq DataFox Headquarters
+                address.mbs
+                  span.street
+                    | 324 5th Street <br/>
+                  | San Francisco, CA 94107
+
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade

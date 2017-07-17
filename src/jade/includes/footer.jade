@@ -1,0 +1,70 @@
+div.container-fluid.footer
+  div.container
+    div.row
+      div.col-md-3
+        p
+          a(href='/')
+            img.datafox-brand.hidden-xs.hidden-sm(src='/img/datafox-logo-white2.png', alt='DataFox Logo')
+            img.datafox-brand-mobile.hidden-md.hidden-lg(src='/img/datafox-logo-white2.png', alt='DataFox Logo')
+        address
+          | 324 5th Street <br/>
+          | San Francisco, CA 94107 <br/>
+          a(href="tel:1-415-969-2142") (415) 969-2144
+          br
+          a(href='mailto:info@datafox.com') info@datafox.com
+        p.social-icons
+          a(href='https://www.linkedin.com/company/datafox')
+            i.fa.fa-linkedin.mrs(aria-hidden="true")
+            span.sr-only LinkedIn
+
+          a(href='https://twitter.com/datafoxco')
+            i.fa.fa-twitter.mrs(aria-hidden="true")
+            span.sr-only Twitter
+      div.col-md-2.col-md-offset-1
+        span.title DataFox
+        ul.list-unstyled
+          li
+            a(href='/product') Product
+          li
+            a(href='/who-benefits') Who Benefits?
+          li
+            a(href='/customers') Customers
+          li
+            a(href='/company') Company
+          li
+            a(href='http://www.datafox.com/blog') Blog
+      div.col-md-2
+        span.title Learn More
+        ul.list-unstyled
+          li
+            a(href='http://blog.datafox.com/what-is-account-based-marketing/') Account-based Marketing
+          li
+            a(href='http://blog.datafox.com/nail-sales-prospecting-companies-with-datafox/') Sales Prospecting Tips
+          li
+            a(href='http://blog.datafox.com/tag/sales-operations/') Sales Operations Strategy
+          li
+            a(href='/find-companies/location/') Fastest-Growing Tech Companies By Region
+      div.col-md-2
+        span.title Tour
+        ul.list-unstyled
+          li
+            a(href='/tour/salesforce/') DataFox + Salesforce
+          li
+            a(href='/tour/slack/') DataFox + Slack
+          li
+            a(href='/tour/chrome/') DataFox + Chrome
+          li
+            a(href='/tour/api/') DataFox API
+      div.col-md-2
+        span.title Support
+        ul.list-unstyled
+          li
+            a(href='mailto:info@datafox.com') Email Us
+          li
+            a(href='http://support.datafox.com/') Help Center
+          li
+            a(href='/privacy-policy') Privacy Policy
+          li
+            a(href='/terms-of-service') Terms of Service
+
+include register_modal.jade

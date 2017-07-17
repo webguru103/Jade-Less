@@ -1,0 +1,135 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    //- meta(name='keywords', content='datafox careers, jobs, hiring')
+    //- meta(name='description', content='DataFox is hiring!')
+    title DataFox | Careers
+
+  body
+
+    //- Header
+    - currentTab = 'company'
+    - trackingCurrentPage = 'careers'
+    include ../includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.careers
+      div.container.page-top-content
+        div.row.text-center
+          h1 Join the DataFox Team
+          p.lead.pvm
+            em Because we’re betting you hate grunt work, too.
+
+    div.container-fluid.section.section-values.section-bottom-border
+      div.container
+        h2.section-header.text-center Our Values
+        div.row
+          div.col-md-5.value
+            h3
+              img.prm(src='/img/company/value/team.png',alt='')
+              | We are a team
+            p We go out of our way to help our teammates succeed. We celebrate victories, big and small. We love working with committed, dedicated, extremely talented people. We advance the team with every hire.
+
+          div.col-md-5.col-md-offset-1.value
+            h3
+              img.prm(src='/img/company/value/problems.png',alt='')
+              | We embrace hard problems
+            p We embrace hard problems. We thrive in solving complicated problems with software. We enjoy automating awful manual work for others. We care about building a reputation for technical excellence.
+        div.row
+          div.col-md-5.value
+            h3
+              img.prm(src='/img/company/value/delight.png',alt='')
+              | We delight our customers
+            p We work to uncover our customers' pains, and then delight whem with our solutions. We're motivated to clean messy data (seriously). We're focused on building a product we can be proud of.
+          div.col-md-5.col-md-offset-1.value
+            h3
+              img.prm(src='/img/company/value/learning.png',alt='')
+              | We are constantly learning
+            p We care about agility and constant improvement. We prefer autonomy and unstructed environments. We experiment, pivot, build, and grow every day.
+
+    div.container-fluid.section.section-benefits.section-bottom-border
+      div.container
+        div.row
+          div.col-md-5
+            img.img-mobile(src='/img/company/career/benefits.jpg',alt='DataFox employee working in the office')
+          div.col-md-5.col-md-offset-2
+            h2.section-header Employee Benefits
+            p.pbm At DataFox, we want to make sure you're as happy and productive as possible. Here are just some of the advantages to being a DataFox employee:
+
+            p.pbm
+              h3.h5.text-uppercase Benefits
+              ul
+                li Health, dental, and vision insurance
+                li Generous PTO and paid holidays
+                li Competitive salary and equity
+                li Caltrain expenses fully covered for commuters
+
+            p.pbm
+              h3.h5.text-uppercase Perks
+              ul
+                li Delicious catered lunch every day
+                li A fully stocked snacks and drinks pantry
+                li Up to $1,500 a year towards continuing your career education
+
+            p.pbm
+              h3.h5.text-uppercase A great place to work
+              ul
+                li A flat hierarchy with numerous opportunities for advancement
+                li Work-life balance - we encourage you to take time out of your day for a yoga class or run
+                li Regular team events
+                li A supportive environment of growth and learning
+
+    div.container-fluid.section.section-bottom-border.section-career-carousel
+      div.container
+        h2.section-header.text-center Why work at DataFox?
+
+        //- Add data-interval='false' to test this without it moving
+        #carousel-users.carousel.slide(data-ride='carousel',data-interval='10000')
+          ol.carousel-indicators
+            li(data-target="#carousel-users", data-slide-to="0").active
+            li(data-target="#carousel-users", data-slide-to="1")
+            li(data-target="#carousel-users", data-slide-to="2")
+
+          //- Wrapper for slides
+          div.carousel-inner(role="listbox").text-left
+            div.item.active
+              div.item-inner
+                img(src='/img/company/career/anisha.png', alt='Anisha')
+                div.quote
+                  p.lead
+                    em "DataFox is an amazing place to learn new skills. I feel completely empowered to say, 'I want to get experience in product, or data, or something else outside my day-to-day. What projects can I take on?' That's extremely valuable, particulary in your first or second job out of college."
+                  p.user Anisha, Demand Generation
+            div.item
+              div.item-inner
+                img(src='/img/company/career/elena.png', alt='Elena')
+                div.quote
+                  p.lead
+                    em "As an engineer, it’s important to always undertake high impact projects and still have the autonomy to move fast and take risks. As part of our small but talented engineering team, I am able to plan, prioritize, and execute on all parts of the product, giving me a deep sense of ownership in the business."
+                  p.user Elena, Engineering
+            div.item
+              div.item-inner
+                img(src='/img/company/career/brock.png', alt='Ben')
+                div.quote
+                  p.lead
+                    em "I love working at DataFox. So many team members bring blue chip corporate experience - Box, Salesforce, Goldman Sachs, LinkedIn - from prior roles, but joined a startup for the same reason. It’s a great group to learn from as we all grow the business together."
+                  p.user Ben, Sales
+
+    div.container-fluid.section.section-jobs
+      div.container
+        h2.section-header.text-center Current Openings
+
+        div.job-openings.col-md-8.col-md-offset-2
+          div.loading-icon
+            i.fa.fa-circle-o-notch.fa-spin.icon-large
+            | Loading job openings...
+
+
+    include ../includes/subfooter-job.jade
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade
+

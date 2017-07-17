@@ -1,0 +1,118 @@
+include ../mixins.jade
+
+div.container-fluid.page-tabs-row.page-tabs-overview.section-bottom-border.visible-xs-inline-block
+  div.container
+    div.row
+      div.col-md-8.col-md-offset-2
+        h3 Sales
+        p Focus on prospecting, not researching
+
+ div.section
+    div.container
+      div.row
+        div.col-md-6
+          div.text-cell.section-sales-dev
+            ul.nav.nav-tabs(role="tablist")
+                  li.active(role='presentaton')
+                    a(href='#light', data-location="sales-development", aria-controls='light',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.image-mtxl-menu
+                          h4.media-heading.dev-1
+                            div.image-center
+                            | Know which accounts to go after
+
+                  li(role='presentation')
+                    a(href='#priority', data-location="sales-development",arial-controls='priority',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-2
+                            div.image-center
+                            | Start ever day with prioritized accounts
+     
+                  li(role='presentation')
+                    a(href='#contact', data-location="sales-development",arial-control='contact',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-3
+                            div.image-center
+                            | Unlock buyer contact information
+
+                  li(role='presentation')
+                    a(href='#face-meeting', data-location="sales-development",arial-controls='face-meeting',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-4
+                            div.image-center
+                            | Set more face-to-face meetings
+
+
+                  li(role='presentation')
+                    a(href='#alerted-behavior', data-location="sales-development",arial-control='alerted-behavior',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-5
+                            div.image-center
+                            | Get alerted to buyer behavior
+
+                  li(role='presentation')
+                    a(href='#graph', data-location="sales-development",arial-control='graph',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-6
+                            div.image-center
+                            | Get insights where they are most actionable
+
+        div.col-md-6.col-md-offset-1.tab-content.tab-position
+          #light.tab-pane.fade.in.active(role='tabpanel')
+            include ./sales-development/light.jade
+          #priority.fade.tab-pane(role='tabpanel')
+            include ./sales-development/priority.jade
+          #contact.fade.tab-pane(role='tabpanel')
+            include ./sales-development/contact.jade
+          #face-meeting.fade.tab-pane(role='tabpanel')
+            include ./sales-development/face-meeting.jade
+          #alerted-behavior.fade.tab-pane(role='tabpanel')
+            include ./sales-development/alerted-behavior.jade
+          #graph.fade.tab-pane(role='tabpanel')
+            include ./sales-development/graph.jade
+
+div.container-fluid.section-bottom-background.page-tabs-row
+  div.container
+    h1
+      |Resources
+      p
+    div.row
+      div.col-md-4.text-center
+        div.section-img
+          img.img-side(src='/img/use-case/resources/Layer-64.png',height='200px',alt='Example company signal of Karmic Labs raising a round from investors Greycroft Partners and Marketplace Fund')
+          div.text-space
+              h4.text-explain
+                strong DataFox Chrome Extension
+              p Redefine how your organization finds and manages prospect and customer data with DataFox.
+      div.col-md-4.text-center
+        div.section-img
+          img.img-side(src='/img/use-case/resources/Layer-66.png',height='200px',alt='Example company signal of Karmic Labs raising a round from investors Greycroft Partners and Marketplace Fund')
+          div.text-space
+              h4.text-explain
+                strong Schedule A Webinar
+              p "The Data-Driven Salesperson: How to prospect efficiently & increase response rates" with DataFox.
+      div.col-md-4.text-center.col-md-offset
+        div.section-img
+          img.img-side(src='/img/use-case/resources/Layer-67.png',height='200px',alt='Example company signal of Karmic Labs raising a round from investors Greycroft Partners and Marketplace Fund')
+          div.text-space
+              h4.text-explain
+                strong Rainforest Case Study
+              p Read about how Rainforest grew their SDR team from 2 to 5 with DataFox.
+
+div.container-fluid.sub-footer.sales-ops
+  div.container
+    div.row
+      div.col-md
+        h2.sales-font
+          p Ditch the grunt work.
+        p Get started with intelligent account-based prospecting.
+        p
+          a.trial-btn.btn.btn-primary.btn-full(data-toggle="modal", data-target=".default-request-demo-modal", href="javascript:void(0);", data-location="sales-operation") 
+            strong Request Free Trial
+
+include ../.././includes/js/javascript.jade

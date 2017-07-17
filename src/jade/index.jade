@@ -1,0 +1,190 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include includes/header.jade
+
+    //- Specific to this page
+    meta(name='description', content='DataFox helps find new prospects, keep accounts current and expand territories. We make sales operations easy with our machine learning technology and thousands of data sources.')
+    meta(name='keywords', content='sales operations, account-based marketing, find new leads, sales prospecting, company information')
+    meta(name='twitter:card',content='summary')
+    meta(name='twitter:site',content='@datafoxco')
+    meta(name='twitter:title',content='DataFox | The Premier Sales Intelligence Platform')
+    meta(name='twitter:description',content='Helping sales and marketing teams prospect smarter')
+    meta(name='twitter:image',content='https://pbs.twimg.com/profile_images/743943654411112449/2dmzB30l_400x400.jpg')
+    meta(name='google-site-verification', content='EuhHfUybKXcKpA9Wa9VoQ3QUGWZc60ppdHINEXvxYUo')
+    title DataFox | Prospect Sales Leads with Company Signals
+
+  body
+
+    //- Header
+    - currentTab = 'home'
+    - trackingCurrentPage = 'home'
+    include includes/navbar-marketo.jade
+
+    div.container-fluid.hero
+      div.container.hero-content
+        div.row
+          div.col-md-8
+            h1 The Unfair Prospecting Advantage
+            p.lead.pvm
+              em Get the right company insights to find and win more business with machine learning and data science.
+            p
+              a.trial-btn.btn.btn-primary.btn-full-light(data-toggle="modal", data-target=".default-request-demo-modal", href="#", data-location='hero') Request Free Trial
+          div.col-md-4 &nbsp;
+
+    include includes/subfooter.jade
+
+    div.container.section.section-features.text-center
+      div.row
+
+        div.col-md-4
+          div.row
+            div.col-sm-10.col-sm-offset-1.feature-column
+              div.feature
+                p.pbm
+                  img(src='/img/homepage/icon-collab.png', alt='Collaboration icon', height=80)
+                h2.mini-header Clean Data
+                p Get squeaky-clean data at your fingertips. Clean up dirty databases, enrich the fields you need, and acquire new prospects.
+              div.pvs
+                a.btn.btn-bordered(href="/product/?tab=enrich") Learn More
+
+        div.col-md-4
+          div.row
+            div.col-sm-10.col-sm-offset-1.feature-column
+              div.feature
+                p.pbm
+                  img(src='/img/homepage/icon-clock.png', alt='Stopwatch', height=80)
+                h2.mini-header Prospecting Platform
+                p More prospects, less grunt work. Find hidden gems using our 30+ company filters, including whether or not they’re already in your CRM.
+              div.pvs
+                a.btn.btn-bordered(href="/product/?tab=find-prospects") Learn More
+
+        div.col-md-4
+          div.row
+            div.col-sm-10.col-sm-offset-1.feature-column
+              div.feature
+                p.pbm
+                  img(src='/img/homepage/icon-target.png', alt='Archery target', height=80)
+                h2.mini-header Company Signals
+                p Get customized insights via newsfeeds, emails, or real-time alerts. Use 40+ pre-defined signals to filter out noise or create your own.
+              div.pvs
+                a.btn.btn-bordered(href="/product/?tab=targeted-sales") Learn More
+
+    div.container-fluid.section-numbers
+      div.container
+        div.row
+
+          div.col-md-4.text-center
+            span.mini-header.lead 1.2M+
+            span.text-uppercase &nbsp; Monitored Companies
+
+          div.col-md-4.text-center
+            span.mini-header.lead 7M+
+            span.text-uppercase &nbsp; Contacts
+
+          div.col-md-4.text-center
+            span.mini-header.lead 25K+
+            span.text-uppercase &nbsp; Company Signals Daily
+
+    div.container-fluid.section.section-grey.section-logos-carousel.text-center.section-logo-alignment
+      div.row
+        div.col-md-10.col-md-offset-1
+          h2.section-header Who's Using Datafox
+          h3 Hundreds of industry leaders are using DataFox to prospect smarter and faster, including:
+      div.row
+        div.col-md-12
+          //- Add data-interval='false' to test this without it moving
+          #carousel-logos.carousel.slide(data-ride='carousel')
+            //- Indicators
+            div.text-center
+              ol.carousel-indicators.text-center
+                li(data-target="#carousel-logos", data-slide-to="0").active
+                li(data-target="#carousel-logos", data-slide-to="1")
+                li(data-target="#carousel-logos", data-slide-to="2")
+
+            //- Wrapper for slides
+            div.carousel-inner(role="listbox")
+              div.item.active
+                div.item-inner
+                  div.row
+                    div.col-md-6
+                      div.logos-left
+                        span.logo-container
+                         img.logo(src='/img/homepage/customers/box.png', alt='Box', height='95px')
+                        span.logo-container
+                          img.logo(src='/img/homepage/customers/insight.png', alt='Insight Squared', height='95px')
+                    div.col-md-6
+                      div.logos-right
+                        span.logo-container
+                          img.logo(src='/img/homepage/customers/twilio.png', alt='Twilio', height='95px')
+                        span.logo-container
+                          img.logo(src='/img/homepage/customers/netapp.png', alt='NetApp', height='95px')
+              div.item
+                div.item-inner
+                  div.row
+                    div.col-md-6
+                      div.logos-left
+                        span.logo-container
+                          img.logo.prl(src='/img/homepage/customers/t3.png', alt='T3 Advisors')
+                        span.logo-container
+                          img.logo(src='/img/homepage/customers/ups.png', alt='UPS')
+                    div.col-md-6
+                      div.logos-right.ptm
+                        span.logo-container
+                          img.logo.prn(src='/img/customers/6sense.png', height=70, alt='6Sense')
+                        span.logo-container
+                          img.logo(src='/img/homepage/customers/vivid.png', height=70, alt='Vivid Cortex')
+              div.item
+                div.item-inner
+                  div.row
+                    div.col-md-3.col-md-offset-1.logos-left
+                      span
+                        img.img-mobile(src='/img/customers/goldman.png', alt='Goldman Sachs')
+                    div.col-md-3
+                      span
+                        img(src='/img/homepage/customers/united.png', alt='United Healthcare', height='85px')
+                    div.col-md-4.logos-right
+                      span
+                        img(src='/img/homepage/customers/volkswagon.png', alt='Volkswagon Financial Services', height='85px')
+
+    div.container.section.section-user-carousel
+      div.row.text-center
+        h2.section-header What Users Have To Say
+
+        div.col-md-8.col-md-offset-2
+          include includes/user_carousel.jade
+          +customerCarousel('index-')
+
+
+    div.container.section.section-blog
+      h2.section-header.text-center Prospecting Resources
+      div.row
+        div.col-md-4.blog-post
+          img(src='/img/homepage/slack-competitive-intel-small.jpg', alt='Slack integration screenshot').blog-image
+          h3
+            a(href='http://www.datafox.com/tour/slack/')
+              | DataFox for Slack: Get Company Signals in Real-Time to Helpful Slack Channels
+          p Customize prospect alerts from 40+ granular types of signals, such as any time a competitor makes the news, or a Californian fintech company hires a new VP of Sales. Then, connect DataFox to Slack to instantly receive specific alerts in specific Slack channels.
+        div.col-md-4.blog-post
+          img(src='img/homepage/blog-workstation.png').blog-image
+          h3
+            a(href='http://blog.datafox.com/4-ways-search-similar-companies-datafox/')
+              | 4 Ways to Search for Similar Companies with DataFox
+          p With DataFox, you can save time by using our Similar Companies Algorithm, which leverages our machine learning technology to identify competitors and build industry landscapes.
+        div.col-md-4.blog-post
+          img(src='img/homepage/blog-city.png').blog-image
+          h3
+            a(href='http://blog.datafox.com/4-ways-search-similar-companies-datafox/')
+              | What is Account-Based Marketing?
+          p Account-based marketing is more than just a trend in the sales world: it represents a shift from the idea of chasing deals individually, to strategically prioritizing and coordinating between sales and marketing teams. Read on for a definition of account-based marketing, an overview of key tactics and best practices.
+
+
+
+
+    include includes/subfooter.jade
+
+    include includes/footer.jade
+
+    include includes/js/javascript.jade
+

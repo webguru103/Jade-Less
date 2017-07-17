@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include includes/header.jade
+
+    //- Specific to this page
+    meta(name='description', content='Helping sales operations increase efficiency, marketers find new audiences and SDRs expand their territory.')
+    meta(name='keywords', content='new prospects, account-based marketing, sales triggers, news events, prospecting tools')
+    title DataFox | Sales Operations, Account-Based Marketing Experts and More
+
+  body
+
+    //- Header
+    - currentTab = 'customer'
+    - trackingCurrentPage = 'who-benefits'
+    include includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.who-benefits
+      div.container.page-top-content
+        div.row.text-center
+          h1 Who Benefits?
+
+    div.container-fluid.page-tabs
+      div.container
+        div.row.page-tabs-row.text-center
+          ul.nav.nav-tabs.three-tab(role="tablist")
+            li.active(role='presentaton')
+              a(href='#sales', data-location="who-benefits", aria-controls='home',role='tab',data-toggle='tab')
+                div.media.phl
+                  div.media-left.media-middle
+                    img.media-object(src='/img/use-case/icon-svg/graph-up.svg',height='24px',alt='')
+                  div.media-body.media-middle
+                    h2.media-heading.visible-sm-block.visible-md-block.visible-lg-block Sales Development
+            li(role='presentation')
+              a(href='#sales-ops', data-location="who-benefits",arial-controls='sales-ops',role='tab',data-toggle='tab')
+                div.media.phl
+                  div.media-left.media-middle
+                    img.media-object(src='/img/use-case/icon-svg/account-management.svg',height='24px',alt='')
+                  div.media-body.media-middle
+                    h2.media-heading.visible-sm-block.visible-md-block.visible-lg-block Account Management
+
+            li(role='presentation')
+              a(href='#marketing', data-location="who-benefits",arial-control='marketing',role='tab',data-toggle='tab')
+                div.media.phl
+                  div.media-left.media-middle
+                    img.media-object(src='/img/use-case/icon-svg/flag.svg',height='24px',alt='')
+                  div.media-body.media-middle
+                    h2.media-heading.visible-sm-block.visible-md-block.visible-lg-block Sales Operations
+
+    div.container-fluid.tab-content.page-tabs-content
+      #sales.tab-pane.fade.in.active(role='tabpanel')
+        include includes/who-benefits/sales.jade
+      #sales-ops.fade.tab-pane(role='tabpanel')
+        include includes/who-benefits/sales-ops.jade
+      #marketing.fade.tab-pane(role='tabpanel')
+        include includes/who-benefits/marketing.jade
+
+
+
+    include includes/footer.jade
+
+    include includes/js/javascript.jade

@@ -1,0 +1,118 @@
+include ../mixins.jade
+
+div.container-fluid.page-tabs-row.page-tabs-overview.section-bottom-border.visible-xs-inline-block
+  div.container
+    div.row
+      div.col-md-8.col-md-offset-2
+        h3 Sales
+        p Focus on prospecting, not researching
+
+ div.section
+    div.container
+      div.row
+        div.col-md-6
+          div.text-cell.section-sales-ops
+            ul.nav.nav-tabs(role="tablist")
+                  li.active(role='presentaton')
+                    a(href='#data-health', data-location="sales-operations", aria-controls='data-health',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.image-mtxl-menu
+                          h4.media-heading.dev-1
+                            div.image-center
+                            | Get a detailed look at your data's health
+
+                  li(role='presentation')
+                    a(href='#database', data-location="sales-operations",arial-controls='database',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-2
+                            div.image-center
+                            | Clean and enrich your entire database
+     
+                  li(role='presentation')
+                    a(href='#update', data-location="sales-operations",arial-control='update',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-3
+                            div.image-center
+                            | Automatically update your CRM
+
+                  li(role='presentation')
+                    a(href='#territories', data-location="sales-operations",arial-controls='territories',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-4
+                            div.image-center
+                            | Plan territories with ease
+
+
+                  li(role='presentation')
+                    a(href='#company-alerts', data-location="sales-operations",arial-control='company-alerts',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-5
+                            div.image-center
+                            | Deliver reps company alerts by territory
+
+                  li(role='presentation')
+                    a(href='#sales-stack', data-location="sales-operations",arial-control='sales-stack',role='tab',data-toggle='tab')
+                      div.image-hover
+                        div.mtxl.image-mtxl-menu
+                          h4.media-heading.dev-6
+                            div.image-center
+                            | Integrate DataFox with your sales stack
+
+        div.col-md-6.col-md-offset-1.tab-content.tab-position
+          #data-health.tab-pane.fade.in.active(role='tabpanel')
+            include ./sales-operations/data-health.jade
+          #database.fade.tab-pane(role='tabpanel')
+            include ./sales-operations/database.jade
+          #update.fade.tab-pane(role='tabpanel')
+            include ./sales-operations/update.jade
+          #territories.fade.tab-pane(role='tabpanel')
+            include ./sales-operations/territories.jade
+          #company-alerts.fade.tab-pane(role='tabpanel')
+            include ./sales-operations/company-alerts.jade
+          #sales-stack.fade.tab-pane(role='tabpanel')
+            include ./sales-operations/sales-stack.jade
+
+div.container-fluid.section-bottom-background.page-tabs-row
+  div.container
+    h1
+      |Resources
+      p
+    div.row
+      div.col-md-4.text-center
+        div.section-img
+          img.img-side(src='/img/use-case/resources/Layer-85.png',height='200px',alt='Example company signal of Karmic Labs raising a round from investors Greycroft Partners and Marketplace Fund')
+          div.text-space
+              h4.text-explain
+                strong Free Data Health Report
+              p Redefine how your organization finds and manages prospect and customer data with DataFox.
+      div.col-md-4.text-center
+        div.section-img
+          img.img-side(src='/img/use-case/resources/Layer-84.png',height='200px',alt='Example company signal of Karmic Labs raising a round from investors Greycroft Partners and Marketplace Fund')
+          div.text-space
+              h4.text-explain
+                strong Marketo 1-Sheeter
+              p "The Data-Driven Salesperson: How to prospect efficiently & increase response rates" with DataFox.
+      div.col-md-4.text-center.col-md-offset
+        div.section-img
+          img.img-side(src='/img/use-case/resources/Layer-83.png',height='200px',alt='Example company signal of Karmic Labs raising a round from investors Greycroft Partners and Marketplace Fund')
+          div.text-space
+              h4.text-explain
+                strong Salesforce 1-sheeter
+              p Read about how Rainforest grew their SDR team from 2 to 5 with DataFox.
+
+div.container-fluid.sub-footer.sales-ops
+  div.container
+    div.row
+      div.col-md
+        h2.sales-font
+          p Managing your data doesn't have to be grunt work.
+        p subtitle needed?
+        p
+          a.trial-btn.btn.btn-primary.btn-full(data-toggle="modal", data-target=".request-demo-modal", href="javascript:void(0);", data-location="sales-operation") 
+            strong Request Demo
+
+include ../.././includes/js/javascript.jade

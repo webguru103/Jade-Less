@@ -1,0 +1,116 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include includes/header.jade
+
+    //- Specific to this page
+    //- meta(name='description', content='An advanced platform for sourcing deals, comparing groups of companies, and monitoring technology sectors.')
+    title DataFox | Why Leading Sales Operations Directors and Investors Use DataFox
+
+  body
+
+    //- Header
+    - currentTab = 'customer'
+    - trackingCurrentPage = 'customers'
+    include includes/navbar-marketo.jade
+
+    div.container-fluid.page-top.customers
+      div.container.page-top-content
+        div.row.text-center
+          h1 The world’s top companies use DataFox to prospect smarter and faster
+          p.lead.pvm
+            em Here’s what they have to say.
+
+    div.section-customers.container.section.text-center.pbn
+
+      //- Row 1
+      div.row.row-1
+        div.col-sm-6
+          div.row
+            div.col-md-10.col-md-offset-1.testimonial
+              div.company-logo-container
+                img(src='/img/customers/box.png',alt='Box').company-logo
+              p.quote.quote2 "DataFox has been instrumental in helping us discover, target, and engage the early-stage market for our platform development efforts."
+              p
+                img.headshot(src='/img/testimonials/joel.jpg',alt='')
+              p.person Joel Bailon
+
+        div.col-sm-6
+          div.row
+            div.col-md-10.col-md-offset-1.testimonial
+              div.company-logo-container
+                img(src='/img/customers/scale.png', alt='Scale Venture Partners').company-logo
+              p.quote.quote2 "DataFox puts information I previously Googled around for at my fingertips and gives me some great additional functionality."
+              p
+                img.headshot(src='/img/testimonials/cack-wilhelm.jpg',alt='')
+              p.person Cack Wilhelm
+
+      //- Row 2
+
+      div.row.row-2
+        div.col-sm-4
+          div.row
+            div.col-md-10.col-md-offset-1.testimonial
+              div.company-logo-container
+                img(src='/img/customers/twilio.png',alt='Twilio').company-logo
+              p.quote.quote1 "Our outbound reps used to spend over half their day on research and data input. With DataFox, our reps spend more time actually calling on prospects, with personalized messages that open doors to valuable conversations. In addition, our customer success managers know which clients to contact with the right message at the right time. Our productivity has gone way up!"
+              p
+                img.headshot(src='/img/testimonials/casey.png',alt='')
+              p.person Casey Clegg
+
+        div.col-sm-4
+          div.row
+            div.col-md-10.col-md-offset-1.testimonial
+              div.company-logo-container
+                img(src='/img/customers/t3.png', alt='T3 Advisors').company-logo
+              p.quote.quote1 "DataFox helps m​e​ ​track my business in a much smarter, data-driven way. Staying up to date on my existing clients, while also identifying the next "Unicorn" company that will be a T3 client. One of the many tools we at T3 lean on to stay ahead of the competition and better support our team and clients."
+              p
+                img.headshot(src='/img/testimonials/db.jpg',alt='')
+              p.person David Bergeron
+
+        div.col-sm-4
+          div.row
+            div.col-md-10.col-md-offset-1.testimonial
+              div.company-logo-container
+                img(src='/img/customers/netapp.png',alt='Netapp').company-logo
+              p.quote.quote1 "In my scouting work for strategic investment opportunities, I sometimes meet with up to 3 or 4 companies a day.  DataFox helps me find new startups in areas of strategic interest and provides analytics to help prioritize my engagements.  The One-Pager presents key information so I’m informed going into each meeting.  Sharing lists of companies with my team helps keep everyone on the same page."
+              p
+                img.headshot(src='/img/testimonials/steve-proffitt.jpg',alt='')
+              p.person Steve Proffitt
+
+
+
+    div.container-fluid.section.section-grey.text-center.section-customer-logos
+      div.container
+        div.row.pbm
+          div.col-md-3.top-row
+            img.img-mobile(src='/img/customers/goldman.png', alt='Goldman Sachs', height='100px')
+          div.col-md-4.top-row
+            img.img-mobile.ups(src='/img/homepage/customers/ups.png', alt='UPS')
+            img.img-mobile(src='/img/customers/6sense.png', height=70, alt='6Sense')
+          div.col-md-5
+            img.img-mobile(src='/img/homepage/customers/insight.png', alt='Insight Squared', height='95px')
+        div.row.pbm
+          div.col-md-5
+            img.img-mobile(src='/img/customers/vivid.png', alt='Vivid Cortex')
+          div.col-md-6.col-md-offset-1
+            img.img-mobile(src='/img/homepage/customers/volkswagon.png', alt='Volkswagon Financial Services')
+        div.row.pbm
+          div.col-md-5.col-md-offset-1
+            img.img-mobile(src='/img/customers/united.png', alt='United Healthcare')
+          div.col-md-5
+            img.img-mobile(src='/img/customers/rocketspace.png', alt='Rocket Space')
+        div.row.pbm
+          div.col-md-3.col-md-offset-1
+            img.img-mobile(src='/img/customers/ventures.png', height='100px')
+          div.col-md-4
+            img.img-mobile(src='/img/customers/green-visor.png', height='100px')
+          div.col-md-3
+            img.img-mobile(src='/img/customers/s-logo.png', height='100px')
+
+    include includes/subfooter.jade
+
+    include includes/footer.jade
+
+    include includes/js/javascript.jade

@@ -1,0 +1,43 @@
+include ../includes/mixins.jade
+
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include ../includes/header.jade
+
+    //- Specific to this page
+    meta(name='keywords', content='salesforce, crm, prospecting, find leads, manage sales accounts')
+    meta(name='description', content='Auto-refresh your Salesforce contact information with DataFox. We make sure every prospect is truly net-new.')
+    title DataFox | Pipeline Management with Salesforce
+
+  body
+
+    //- Header
+    - currentTab = 'integration'
+    - trackingCurrentPage = 'salesforce-int'
+    include ../includes/navbar-marketo.jade
+
+    div.container.section.page-top-plain.section-salesforce
+      div.row
+        div.col-md-10.col-md-offset-1
+          h1.text-center.section-header DataFox + Salesforce
+          p DataFox for Salesforce infuses your CRM with reliable data and machine-learned insights and suggestions.
+
+          p Trust the Lightning-enabled iFrame to provide all the context you need on a business, and leverage bi-directional sync to set-up real-time alerts on your most important accounts.
+
+          p Our Similar Companies Algorithm surfaces new target accounts similar to your best customers. Quickly sync net new accounts and contacts to Salesforce, enriched with key firmographic data.
+            = ' '
+            a(href="https://help.datafox.com/hc/en-us/articles/227080268-Salesforce-DataFox-Integration-Overview") Read More
+
+          div.text-center
+            iframe.mvl(frameborder="0", webkitallowfullscreen="", mozallowfullscreen="", allowfullscreen="", src="https://player.vimeo.com/video/191230221?autoplay=0&amp;title=0&amp;byline=0&amp;portrait=0")
+
+          p.ptl.text-center
+            +trialButton('tour-salesforce')
+
+
+
+    include ../includes/footer.jade
+
+    include ../includes/js/javascript.jade

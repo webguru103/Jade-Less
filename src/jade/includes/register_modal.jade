@@ -1,0 +1,46 @@
+// include only once
+script(src="//app-sj11.marketo.com/js/forms2/js/forms2.min.js")
+
+mixin registerModal(modalClass, marketoFormId, heading)
+  .fade.modal(tabindex='-1', role='dialog', class=modalClass)
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .row
+            .col-md-7.border-right.prn
+              .modal-padding
+                h3.uppercase.mtn
+                  = heading
+                small.text-muted Fill out the form below and we'll be in touch shortly
+
+                form(id='mktoForm_' + marketoFormId)
+                script.
+                  MktoForms2.loadForm("//app-sj11.marketo.com", "858-PGI-318", #{marketoFormId}, function(form) {
+                    form.onSuccess(function() {
+                      window.trackEvent('Submitted Request Trial Form');
+                      $('.modal-body').html(
+                        "<h2 class='text-primary pal text-center'>Thanks, we'll be in touch shortly!</h2>"
+                      );
+                      // do not reload page!
+                      return false;
+                    });
+                  });
+
+            .col-md-5.pln.border-left
+              .modal-padding
+                div
+                  small.uppercase.text-muted Call our sales team
+                h4.mbn.mts
+                  a(href="tel:1-415-969-2144") +1 (415) 969-2144
+
+              div.border-top.modal-padding
+                include user_carousel.jade
+                +customerCarousel('modal-' + modalClass + '-')
+
+
++registerModal('default-request-demo-modal', 1236, 'Request Free Trial')
++registerModal('data-health-report-modal', 1173, 'Request Data Health Report')
++registerModal('marketo-modal', 1299, 'Get the Marketo Webhook')
++registerModal('api-modal', 1296, 'Request API Access')
++registerModal('request-demo-modal', 1303, 'Request Demo')
+

@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+  head
+    //- General header info
+    include includes/header.jade
+
+    //- Specific to this page
+    meta(name='keywords', content='company profile, competitor profile, investor, comps list')
+    meta(name='description', content='Find qualified prospects and start the sales conversation without leaving the page.')
+    title DataFox | Resources
+
+  body
+
+    //- Header
+    - currentTab = 'resources'
+    - trackingCurrentPage = 'resources'
+    include includes/navbar-marketo.jade
+
+    div.container.section.page-top-plain
+      div.row
+        div.col-md-10.col-md-offset-1
+          h1.section-header.text-center Resources
+
+
+        h2 Prospecting for sales reps
+        ul
+          li
+            a(href='https://www.youtube.com/watch?v=Xc37QIGtBvY') Video: DataFox - Sales Modernization for the Strategic Seller
+          li
+            a(href='http://info.datafox.co/rs/858-PGI-318/images/Data%20Sheet%20-%20Company%20Database%20Quality%20over%20Quantity.pdf') Finding Truly Net-New Prospects: Company Database Quality over Quantity
+          li
+            a(href='http://info.datafox.co/rs/858-PGI-318/images/Data%20Sheet%20-%20DataFox%20for%20Sales.pdf') Strategic selling starts with DataFox
+          li
+            a(href='http://www.datafox.com/blog/nail-sales-prospecting-companies-with-datafox/') 4 Ways to Nail Sales Prospecting with DataFox
+          li
+            a(href='https://www.youtube.com/watch?v=gK4eaISD0JA') Demo: Using DataFox to Search for Similar Companies
+
+        h2 Outreach and sales conversations
+        ul
+          li
+            a(href='http://info.datafox.co/the-data-driven-salesperson-webinar-reg.html?utm_source=resources&utm_medium=corsac&utm_campaign=prospecting_webinar') Webinar: the Data-Driven Salesperson
+          li
+            a(href='https://www.youtube.com/channel/UCRCe8q3xFKL92aULpKQYx8Q') Overview: How DataFox Makes Sales Conversations Personal
+
+        h2 Growth equity and corporate development
+        ul
+          li
+            a(href='http://info.datafox.co/rs/858-PGI-318/images/Data%20Sheet%20-%20DataFox%20for%20Growth%20Equity%20Finance%20Investing.pdf')
+              | Finance, Growth Equity and Investing: DataFox makes discovery simple and research painless.
+          li
+            a(href='http://info.datafox.co/rs/858-PGI-318/images/Data%20Sheet%20-%20Conference%20Explorer.pdf')
+              | Conference Explorer by DataFox: Face-to-face meetings are still crucial to closing deals.
+          li
+            a(href='http://info.datafox.com/growth-equity-pro-tips-finding-high-growth-companies') Growth Equity Pro Tips: Finding High-Growth Companies
+          li
+            a(href='http://info.datafox.com/sales-rep-training-turn-new-hires-into-standouts.html?utm_source=resources&utm_medium=corsac&utm_campaign=sales_training_webinar') Webinar: Training Sales Reps - How to Turn New Recruits Into Standouts
+
+        h2 Account-based marketing
+        ul
+          li
+            a(href='http://www.datafox.com/blog/how-do-you-scale-an-account-based-marketing-strategy/') How Do You Scale an Account-Based Marketing Strategy?
+          li
+            a(href='http://info.datafox.com/using-sales-triggers-to-accelerate-account-based-marketing-webinar-reg.html?utm_source=resources&utm_medium=corsac&utm_campaign=sales_triggers_webinar') Webinar: Using Sales Triggers to Accelerate ABM Success
+
+        h2 Other use cases
+        ul
+          li
+            a(href='http://info.datafox.co/rs/858-PGI-318/images/Data%20Sheet%20-%20DataFox%20for%20Recruiters.pdf') Recruiters: Find companies just as they start hiring
+          li
+            a(href='http://info.datafox.co/rs/858-PGI-318/images/Data%20Sheet%20-%20DataFox%20for%20Economic%20Development%20Agencies.pdf')
+              | Economic Development Agencies: The data-driven approach to helping local businesses
+          li
+            a(href='http://info.datafox.com/rs/858-PGI-318/images/DataFox for Job Seekers.pdf')
+              | DataFox for Job Seekers: Find Your Next Job with DataFox
+
+
+
+
+    include includes/footer.jade
+
+    include includes/js/javascript.jade

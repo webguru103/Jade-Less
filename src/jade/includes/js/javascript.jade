@@ -1,0 +1,45 @@
+//- Placed at the end of the document so the pages load faster
+script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js')
+script(src='/js/fxhnd.js')
+
+// segment
+script(type="text/javascript").
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+  analytics.load("982EY1aRmMryDnb3HaVOSdCHWA2cyWpb");
+  analytics.page();
+  analytics.trackLink(document.getElementsByClassName('trial-btn'), 'Clicked trial', function(element) {
+      var location = element.getAttribute('data-location');
+      return {loc: location};
+    });
+  }}();
+
+//- Our main JS file
+script(src='/js/main.js')
+
+//- OptinMonster
+div#om-mt4bm2xourqzn54j-holder
+script.
+  var mt4bm2xourqzn54j,mt4bm2xourqzn54j_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){mt4bm2xourqzn54j_poll(function(){if(window['om_loaded']){if(!mt4bm2xourqzn54j){mt4bm2xourqzn54j=new OptinMonsterApp();return mt4bm2xourqzn54j.init({u:"12417.239819",staging:0,dev:0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;mt4bm2xourqzn54j=new OptinMonsterApp();mt4bm2xourqzn54j.init({u:"12417.239819",staging:0,dev:0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");
+
+//- Smooch - chat
+script(src="https://cdn.smooch.io/smooch.min.js")
+script.
+  Smooch.init({appToken: '5ya49fav6jpfg1voghnzjmx2c'});
+
+
+script(type="text/javascript").
+  window.trackEvent = function() {};
+  fxhnd.distinctId(function(err, fxhndId) {
+    window.trackEvent = function(action, options) {
+      if (!options) {
+        options = {};
+      }
+      options.fxhnd_id = fxhndId;
+      window.analytics.track(action, options);
+    }
+  });
+  $('.modal').on('shown.bs.modal', function() {
+    $('.modal input:first').focus();
+    window.trackEvent('Open Request Trial Modal');
+  });
